@@ -3,31 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KeeVa Quiz</title>
-    <link rel="stylesheet" href="style.css">
+    <title>KeeVa's Quiz - Math P2</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; color: white; padding: 20px; }
+        header h1 { font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); margin-bottom: 10px; }
+        header .subtitle { font-size: 1.1em; opacity: 0.9; }
+        .score-board { background: rgba(255,255,255,0.15); border-radius: 20px; padding: 15px 25px; margin-top: 15px; display: inline-flex; gap: 30px; font-size: 1.1em; backdrop-filter: blur(10px); }
+        .card { background: white; border-radius: 20px; padding: 25px; margin: 20px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+        .section-label { display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; font-weight: 600; margin-bottom: 15px; }
+        .section-mc { background: #e3f2fd; color: #1565c0; }
+        .section-fill { background: #fff3e0; color: #e65100; }
+        .section-essay { background: #f3e5f5; color: #7b1fa2; }
+        .question { font-size: 1.15em; color: #333; margin-bottom: 20px; line-height: 1.6; white-space: pre-line; }
+        .options { display: flex; flex-direction: column; gap: 12px; }
+        .option { background: #f8f9fa; border: 3px solid #e9ecef; border-radius: 15px; padding: 15px 20px; cursor: pointer; transition: all 0.3s; font-size: 1.05em; }
+        .option:hover { background: #e3f2fd; border-color: #2196f3; transform: translateX(5px); }
+        .option.correct { background: #c8e6c9; border-color: #4caf50; }
+        .option.wrong { background: #ffcdd2; border-color: #f44336; animation: shake 0.5s; }
+        .option.disabled { pointer-events: none; }
+        @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-10px)} 75%{transform:translateX(10px)} }
+        .fill-blank { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+        .fill-blank input { flex: 1; min-width: 200px; padding: 15px; border: 3px solid #e9ecef; border-radius: 15px; font-size: 1.1em; }
+        .fill-blank input:focus { outline: none; border-color: #ff9800; }
+        .essay textarea { width: 100%; min-height: 120px; padding: 15px; border: 3px solid #e9ecef; border-radius: 15px; font-size: 1.1em; resize: vertical; font-family: inherit; }
+        .btn { background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 15px 40px; border-radius: 30px; font-size: 1.1em; cursor: pointer; margin-top: 20px; transition: transform 0.3s, box-shadow 0.3s; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 5px 20px rgba(102,126,234,0.4); }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .hidden { display: none; }
+        #results { text-align: center; color: white; padding: 40px 20px; }
+        #results h2 { font-size: 2.5em; margin-bottom: 20px; }
+        .final-score { font-size: 3em; font-weight: bold; margin: 20px 0; }
+        .pass-status { font-size: 1.5em; padding: 10px 30px; border-radius: 30px; display: inline-block; margin: 20px 0; }
+        .pass { background: #4caf50; }
+        .fail { background: #f44336; }
+        .review-item { background: white; border-radius: 15px; padding: 20px; margin: 15px 0; text-align: left; color: #333; }
+        .review-item h4 { margin-bottom: 10px; color: #667eea; }
+        .review-item.correct-review { border-left: 5px solid #4caf50; }
+        .review-item.wrong-review { border-left: 5px solid #f44336; }
+        .user-answer, .correct-answer { margin: 5px 0; padding: 8px 12px; border-radius: 8px; }
+        .user-answer { background: #fff3e0; }
+        .correct-answer { background: #e8f5e9; }
+        .confetti { position: fixed; top: -10px; width: 10px; height: 10px; border-radius: 50%; animation: fall 3s linear forwards; pointer-events: none; z-index: 1000; }
+        @keyframes fall { to { transform: translateY(100vh); opacity: 0; } }
+        .progress-bar { background: rgba(255,255,255,0.2); border-radius: 10px; height: 8px; margin-top: 15px; overflow: hidden; }
+        .progress-fill { background: white; height: 100%; border-radius: 10px; transition: width 0.3s; }
+        .q-num { color: rgba(255,255,255,0.8); font-size: 0.95em; margin-top: 5px; }
+        .next-btn { background: linear-gradient(135deg, #ff6b6b, #4ecdc4); color: white; border: none; padding: 12px 30px; border-radius: 25px; font-size: 1em; cursor: pointer; margin-top: 15px; }
+        .submit-quiz-btn { background: linear-gradient(135deg, #4caf50, #2e7d32); color: white; border: none; padding: 18px 50px; border-radius: 30px; font-size: 1.2em; cursor: pointer; margin-top: 30px; }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🎉 KeeVa's Quiz!</h1>
-            <p class="subtitle">P2 Level</p>
+            <h1>🎉 KeeVa's Math Quiz!</h1>
+            <p class="subtitle">P2 | Picture Graphs, 3D Shapes & Money</p>
             <div class="score-board">
-                <span>Score: <strong id="score">0</strong></span>
+                <span>Score: <strong id="score">0</strong>/100</span>
                 <span>Question: <strong id="q-num">1</strong>/50</span>
             </div>
+            <div class="progress-bar"><div class="progress-fill" id="progress" style="width:0%"></div></div>
         </header>
-
-        <main id="quiz-container">
-            <!-- Questions loaded here -->
-        </main>
-
-        <div id="results" class="hidden">
-            <h2>🎊 Great Job!</h2>
-            <p>Final Score: <strong id="final-score">0</strong>/100</p>
-            <div id="grade"></div>
-            <button onclick="restartQuiz()">🔄 Try Again</button>
-        </div>
+        <main id="quiz-container"></main>
+        <div id="results" class="hidden"></div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+    const quizData = {"student": "Keeva", "grade": "P2", "subject": "Math", "topic": "Picture Graphs, 3D Shapes & Money", "source": "MPH 4th Edition WB-2B Units 12, 13, 14", "date": "2026-04-21", "totalQuestions": 50, "passingScore": 95, "passingPoints": 95, "questions": [{"type": "mc", "q": "The picture graph shows the number of fishballs five children ate.\nEach 🐟 stands for 3 fishballs.\nAisha: 5 🐟\nBen: 3 🐟\nChris: 4 🐟\nDinesh: 2 🐟\nElla: 4 🐟\n\nHow many fishballs did Aisha eat?", "options": ["5", "15", "3", "8"], "answer": 1, "unit": "Picture Graphs"}, {"type": "mc", "q": "Based on the fishballs picture graph:\nHow many fishballs did Ben and Chris eat altogether?", "options": ["12", "21", "7", "15"], "answer": 1, "unit": "Picture Graphs"}, {"type": "mc", "q": "Who ate the GREATEST number of fishballs?", "options": ["Ben", "Chris", "Aisha", "Dinesh"], "answer": 2, "unit": "Picture Graphs"}, {"type": "mc", "q": "The picture graph shows fruits Min bought.\nEach 🍎 stands for 5 fruits.\nApples: 4 🍎\nOranges: 3 🍎\nBananas: 6 🍎\n\nHow many more bananas than oranges did Min buy?", "options": ["3", "15", "9", "6"], "answer": 1, "unit": "Picture Graphs"}, {"type": "mc", "q": "If each 🐟 stands for 4 items, and someone has 3 🐟, how many items do they have?", "options": ["7", "12", "34", "43"], "answer": 1, "unit": "Picture Graphs"}, {"type": "mc", "q": "A picture graph shows: Dogs 🐕: 6 🐕, Cats 🐱: 4 🐱, Birds 🐦: 8 🐦. Each 🐦 stands for 2 animals.\nHow many birds are there?", "options": ["8", "4", "16", "2"], "answer": 2, "unit": "Picture Graphs"}, {"type": "mc", "q": "In the picture graph, if 3 stars ⭐ equal 15 points, what does 1 star ⭐ equal?", "options": ["3 points", "5 points", "15 points", "45 points"], "answer": 1, "unit": "Picture Graphs"}, {"type": "mc", "q": "A tally chart shows: 🟢🟢🟢🟢 (4 groups of 5). How many total?", "options": ["4", "5", "9", "20"], "answer": 3, "unit": "Picture Graphs"}, {"type": "mc", "q": "In a picture graph, A has 4 circles ● and B has 6 circles ●. Each ● = 2 items.\nHow many more items does B have than A?", "options": ["2", "4", "6", "20"], "answer": 1, "unit": "Picture Graphs"}, {"type": "mc", "q": "The picture graph shows toys sold:\nCars 🚗: 5 🚗\nDolls 🧸: 3 🧸\nBalls ⚽: 7 ⚽\nEach = 4 toys.\nHow many cars and dolls together?", "options": ["8", "32", "12", "28"], "answer": 1, "unit": "Picture Graphs"}, {"type": "mc", "q": "Which 3D shape has NO flat faces and NO vertices?", "options": ["Cube", "Cone", "Sphere", "Cylinder"], "answer": 2, "unit": "3D Shapes"}, {"type": "mc", "q": "How many flat faces does a cube have?", "options": ["4", "5", "6", "8"], "answer": 2, "unit": "3D Shapes"}, {"type": "mc", "q": "A cone has:\nHow many flat faces?", "options": ["0", "1", "2", "3"], "answer": 1, "unit": "3D Shapes"}, {"type": "mc", "q": "Which shape has 2 circular faces and 1 curved surface?", "options": ["Sphere", "Cylinder", "Cone", "Cube"], "answer": 1, "unit": "3D Shapes"}, {"type": "mc", "q": "A cuboid is also called a:\nWhat is another name for cuboid?", "options": ["Square box", "Rectangular box", "Triangle box", "Circle box"], "answer": 1, "unit": "3D Shapes"}, {"type": "mc", "q": "How many vertices does a triangular pyramid have?", "options": ["3", "4", "5", "6"], "answer": 1, "unit": "3D Shapes"}, {"type": "mc", "q": "Which of these is a cylinder?\n\n(1) �罐 (can)\n(2) 📦 (box)\n(3) 🎈 (balloon)\n(4) 🧊 (ice cube)", "options": ["1 only", "2 only", "3 only", "4 only"], "answer": 0, "unit": "3D Shapes"}, {"type": "mc", "q": "A dice (cube) has how many EDGES?", "options": ["6", "8", "10", "12"], "answer": 3, "unit": "3D Shapes"}, {"type": "mc", "q": "How do you write $5.50 in words?", "options": ["Five dollars fifty cents", "Five hundred fifty cents", "Five point five dollars", "Fifty-five dollars"], "answer": 0, "unit": "Money"}, {"type": "mc", "q": "Ali has $12.30 and buys a book for $8.50. How much change does he get?", "options": ["$3.80", "$4.20", "$3.20", "$4.80"], "answer": 0, "unit": "Money"}, {"type": "mc", "q": "Which is the GREATEST amount?\n$3.45, $3.54, $3.40, $3.05", "options": ["$3.45", "$3.54", "$3.40", "$3.05"], "answer": 1, "unit": "Money"}, {"type": "mc", "q": "A toy costs $15.80. If you pay with a $20 note, how much change will you get?", "options": ["$4.20", "$5.20", "$4.80", "$5.80"], "answer": 0, "unit": "Money"}, {"type": "mc", "q": "How much is 3 ten-dollar notes and 5 one-dollar coins?", "options": ["$35", "$8", "$53", "$15"], "answer": 0, "unit": "Money"}, {"type": "mc", "q": "Sara bought 2 pencils at $1.20 each. How much did she pay?", "options": ["$1.20", "$2.40", "$2.20", "$3.20"], "answer": 1, "unit": "Money"}, {"type": "mc", "q": "Which shows the correct order from LEAST to GREATEST?\n$2.05, $2.50, $2.30, $2.15", "options": ["$2.05, $2.15, $2.30, $2.50", "$2.50, $2.30, $2.15, $2.05", "$2.05, $2.30, $2.15, $2.50", "$2.15, $2.05, $2.30, $2.50"], "answer": 0, "unit": "Money"}, {"type": "fill", "q": "In a picture graph, each 🍎 stands for 4 apples. If there are 5 🍎, the total number of apples is ___.", "answer": "20", "unit": "Picture Graphs"}, {"type": "fill", "q": "The picture graph shows: Cats 🐱: 3 🐱, Dogs 🐕: 5 🐕. Each = 2 animals.\nThe total number of cats and dogs is ___.", "answer": "16", "unit": "Picture Graphs"}, {"type": "fill", "q": "A tally chart shows: 🟢🟢🟢🟢🟢 (5 groups of 5). The total is ___.", "answer": "25", "unit": "Picture Graphs"}, {"type": "fill", "q": "In a picture graph where each ★ = 6 points, 4 stars = ___ points.", "answer": "24", "unit": "Picture Graphs"}, {"type": "fill", "q": "Sarah collected 20 seashells. She puts them in groups of 5. Each 🐚 = 5.\nShe has ___ 🐚", "answer": "4", "unit": "Picture Graphs"}, {"type": "fill", "q": "In a picture graph, the scale shows 1 📚 = 3 books.\n4 📚 = ___ books.", "answer": "12", "unit": "Picture Graphs"}, {"type": "fill", "q": "A picture graph shows: Oranges 🍊: 6 🍊, Apples 🍎: 4 🍊.\nEach = 2 fruits.\nOranges total: ___ fruits.", "answer": "12", "unit": "Picture Graphs"}, {"type": "fill", "q": "A cube has ___ flat faces.", "answer": "6", "unit": "3D Shapes"}, {"type": "fill", "q": "A cone has ___ flat face.", "answer": "1", "unit": "3D Shapes"}, {"type": "fill", "q": "A triangular pyramid has ___ vertices.", "answer": "4", "unit": "3D Shapes"}, {"type": "fill", "q": "A cuboid has ___ edges.", "answer": "12", "unit": "3D Shapes"}, {"type": "fill", "q": "A sphere has ___ flat faces.", "answer": "0", "unit": "3D Shapes"}, {"type": "fill", "q": "A cylinder has ___ curved surface(s).", "answer": "1", "unit": "3D Shapes"}, {"type": "fill", "q": "A cube has ___ vertices.", "answer": "8", "unit": "3D Shapes"}, {"type": "fill", "q": "$3.75 means ___ dollars and ___ cents.", "answer": "3 dollars and 75 cents", "unit": "Money"}, {"type": "fill", "q": "100 cents = ___ dollar.", "answer": "1", "unit": "Money"}, {"type": "fill", "q": "$5.05 in words is ___ dollars and ___ cents.", "answer": "5 dollars and 5 cents", "unit": "Money"}, {"type": "fill", "q": "Three $10 notes = $___.", "answer": "30", "unit": "Money"}, {"type": "fill", "q": "$10 - $3.50 = $___.", "answer": "6.50", "unit": "Money"}, {"type": "fill", "q": "A cake costs $8.90. With $10, the change is $___.", "answer": "1.10", "unit": "Money"}, {"type": "essay", "q": "A picture graph shows the number of books read by 4 students in a month:\n- Amy: 4 📚\n- Ben: 6 📚\n- Cara: 3 📚\n- Dan: 5 📚\n\nEach 📚 = 2 books.\n\nTask: How many books did each student read? Who read the most? Who read the fewest? Show your working.", "unit": "Picture Graphs"}, {"type": "essay", "q": "Lisa bought 3 pencils at $1.50 each and 2 erasers at $0.80 each.\n\nTask: How much did Lisa spend altogether? If she paid with a $10 note, how much change did she get? Show your working.", "unit": "Money"}, {"type": "essay", "q": "Look at these 3D shapes: a cube, a cylinder, and a cone.\n\nTask: Describe the differences between these three shapes. How many flat faces does each have? Which one can roll? Explain why.", "unit": "3D Shapes"}, {"type": "essay", "q": "A shop sold:\n- 4 boxes of crayons at $5.60 each\n- 3 notebooks at $2.30 each\n\nTask: Calculate the total amount spent by customers who bought all these items. Show your working step by step.", "unit": "Money"}, {"type": "essay", "q": "Study the picture graph below:\n\nFavorite Fruits:\n🍎🍎🍎🍎🍎 (Apples)\n🍊🍊🍊🍊 (Oranges)\n🍌🍌🍌🍌🍌🍌 (Bananas)\n🍇🍇🍇 (Grapes)\n\nEach fruit icon = 2 votes.\n\nTask: How many people voted for apples? Which fruit is the most popular? How many more votes for bananas than oranges? Show your working.", "unit": "Picture Graphs"}]};
+    
+    let state = {
+        score: 0,
+        currentQ: 0,
+        answers: [],
+        answered: new Set()
+    };
+    
+    function renderQuestion() {
+        const q = quizData.questions[state.currentQ];
+        const container = document.getElementById('quiz-container');
+        const total = quizData.questions.length;
+        const progress = ((state.currentQ) / total) * 100;
+        
+        document.getElementById('q-num').textContent = state.currentQ + 1;
+        document.getElementById('progress').style.width = progress + '%';
+        
+        let sectionClass = q.type === 'mc' ? 'section-mc' : q.type === 'fill' ? 'section-fill' : 'section-essay';
+        let sectionLabel = q.type === 'mc' ? '🎯 Multiple Choice' : q.type === 'fill' ? '📝 Fill in the Blank' : '✍️ Essay';
+        
+        let html = `<div class="card"><span class="section-label ${sectionClass}">${sectionLabel}</span><div class="question">${q.q}</div>`;
+        
+        if (q.type === 'mc') {
+            html += `<div class="options">`;
+            const letters = ['A', 'B', 'C', 'D'];
+            q.options.forEach((opt, i) => {
+                html += `<div class="option" onclick="selectMC(this, ${i})">${letters[i]}. ${opt}</div>`;
+            });
+            html += `</div><button class="next-btn" id="nextBtn" onclick="nextQ()" disabled>Next ➡️</button>`;
+        } else if (q.type === 'fill') {
+            html += `<div class="fill-blank"><input type="text" id="fillInput" placeholder="Type your answer..." onkeypress="if(event.key==='Enter')checkFill()"></div>`;
+            html += `<button class="next-btn" onclick="checkFill()">Check ✅</button>`;
+        } else if (q.type === 'essay') {
+            html += `<div class="essay"><textarea id="essayInput" placeholder="Write your answer here..."></textarea></div>`;
+            html += `<button class="next-btn" onclick="nextQ()">Next ➡️</button>`;
+        }
+        
+        html += `</div>`;
+        container.innerHTML = html;
+        
+        if (state.currentQ === total - 1 && q.type !== 'essay') {
+            const nextBtn = document.getElementById('nextBtn') || document.createElement('button');
+            nextBtn.className = 'submit-quiz-btn';
+            nextBtn.textContent = '📊 Submit Quiz';
+            nextBtn.onclick = showResults;
+            nextBtn.disabled = false;
+            container.querySelector('.card').appendChild(nextBtn);
+        }
+    }
+    
+    function selectMC(el, idx) {
+        const q = quizData.questions[state.currentQ];
+        document.querySelectorAll('.option').forEach(o => { o.classList.add('disabled'); o.onclick = null; });
+        state.answers[state.currentQ] = idx;
+        state.answered.add(state.currentQ);
+        
+        if (idx === q.answer) {
+            el.classList.add('correct');
+            state.score += 2;
+            document.getElementById('score').textContent = state.score;
+            createConfetti();
+        } else {
+            el.classList.add('wrong');
+            document.querySelectorAll('.option')[q.answer].classList.add('correct');
+        }
+        document.getElementById('nextBtn').disabled = false;
+    }
+    
+    function checkFill() {
+        const input = document.getElementById('fillInput');
+        const q = quizData.questions[state.currentQ];
+        const userAns = input.value.trim().toLowerCase();
+        const correct = q.answer.toLowerCase();
+        
+        state.answers[state.currentQ] = input.value;
+        state.answered.add(state.currentQ);
+        input.disabled = true;
+        
+        if (userAns === correct) {
+            state.score += 2;
+            document.getElementById('score').textContent = state.score;
+            input.style.borderColor = '#4caf50';
+            createConfetti();
+        } else {
+            input.style.borderColor = '#f44336';
+        }
+        
+        // Show correct answer
+        const card = input.parentElement.parentElement;
+        const correctDiv = document.createElement('div');
+        correctDiv.style.cssText = 'margin-top:10px;padding:10px;background:#e8f5e9;border-radius:10px;color:#2e7d32';
+        correctDiv.textContent = 'Correct answer: ' + q.answer;
+        card.appendChild(correctDiv);
+        
+        setTimeout(nextQ, 2000);
+    }
+    
+    function nextQ() {
+        state.currentQ++;
+        if (state.currentQ < quizData.questions.length) {
+            renderQuestion();
+        } else {
+            showResults();
+        }
+    }
+    
+    function createConfetti() {
+        const colors = ['#ff6b6b', '#4ecdc4', '#ffe66d', '#95e1d3', '#f38181', '#aa96da'];
+        for (let i = 0; i < 30; i++) {
+            setTimeout(() => {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDuration = (2 + Math.random() * 2) + 's';
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 4000);
+            }, i * 30);
+        }
+    }
+    
+    function showResults() {
+        document.getElementById('quiz-container').innerHTML = '';
+        const total = quizData.questions.length;
+        const percentage = Math.round((state.score / 100) * 100);
+        const passed = percentage >= 95;
+        
+        let html = `<div id="results"><h2>${passed ? '🎊 CONGRATULATIONS!' : '📚 Good Try!'}</h2>`;
+        html += `<div class="final-score">${state.score}/100 (${percentage}%)</div>`;
+        html += `<div class="pass-status ${passed ? 'pass' : 'fail'}">${passed ? '✅ PASSED! (>95%)' : '❌ Not quite (>95% to pass)'}</div>`;
+        html += '<button class="btn" onclick="showReview()">📖 Review Answers</button>';
+        html += '<button class="btn" style="margin-left:10px" onclick="restartQuiz()">🔄 Try Again</button>';
+        
+        // Review Section
+        html += '<div id="review-section" class="hidden" style="margin-top:40px;text-align:left">';
+        html += '<h3 style="color:white;margin-bottom:20px">📝 Full Review</h3>';
+        
+        // MC Section
+        html += '<div style="background:white;border-radius:15px;padding:20px;margin:15px 0"><h4 style="color:#1565c0">🎯 Multiple Choice (25 questions)</h4>';
+        quizData.questions.slice(0, 25).forEach((q, i) => {
+            const isCorrect = state.answers[i] === q.answer;
+            html += `<div class="review-item ${isCorrect ? 'correct-review' : 'wrong-review'}">
+                <h4>${i + 1}. ${q.q.substring(0, 60)}...</h4>
+                <div class="user-answer">Your answer: ${['A','B','C','D'][state.answers[i]] || 'Not answered'}</div>
+                <div class="correct-answer">Correct: ${['A','B','C','D'][q.answer]}</div>
+            </div>`;
+        });
+        html += '</div>';
+        
+        // Fill Section  
+        html += '<div style="background:white;border-radius:15px;padding:20px;margin:15px 0"><h4 style="color:#e65100">📝 Fill in the Blank (20 questions)</h4>';
+        quizData.questions.slice(25, 45).forEach((q, i) => {
+            const idx = i + 25;
+            const userAns = state.answers[idx] || 'Not answered';
+            const isCorrect = (userAns.toString().toLowerCase().trim() === q.answer.toLowerCase().trim());
+            html += `<div class="review-item ${isCorrect ? 'correct-review' : 'wrong-review'}">
+                <h4>${idx + 1}. ${q.q.substring(0, 60)}...</h4>
+                <div class="user-answer">Your answer: ${userAns}</div>
+                <div class="correct-answer">Correct: ${q.answer}</div>
+            </div>`;
+        });
+        html += '</div>';
+        
+        // Essay Section
+        html += '<div style="background:white;border-radius:15px;padding:20px;margin:15px 0"><h4 style="color:#7b1fa2">✍️ Essay (5 questions)</h4>';
+        quizData.questions.slice(45).forEach((q, i) => {
+            const idx = i + 45;
+            html += `<div class="review-item">
+                <h4>${idx + 1}. ${q.q.substring(0, 80)}...</h4>
+                <div class="user-answer">Your answer:<br>${state.answers[idx] || 'Not answered'}</div>
+            </div>`;
+        });
+        html += '</div>';
+        
+        html += '</div></div>';
+        
+        document.getElementById('results').innerHTML = html;
+        document.getElementById('results').classList.remove('hidden');
+        
+        if (passed) {
+            setTimeout(() => createConfetti(), 500);
+            setTimeout(() => createConfetti(), 1000);
+        }
+    }
+    
+    function showReview() {
+        document.getElementById('review-section').classList.toggle('hidden');
+    }
+    
+    function restartQuiz() {
+        state = { score: 0, currentQ: 0, answers: [], answered: new Set() };
+        document.getElementById('score').textContent = '0';
+        document.getElementById('results').classList.add('hidden');
+        document.getElementById('results').innerHTML = '';
+        renderQuestion();
+    }
+    
+    // Start quiz
+    renderQuestion();
+    </script>
 </body>
 </html>
