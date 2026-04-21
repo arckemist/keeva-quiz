@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeeVa Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎉 KeeVa's Quiz!</h1>
+            <p class="subtitle">P2 Level</p>
+            <div class="score-board">
+                <span>Score: <strong id="score">0</strong></span>
+                <span>Question: <strong id="q-num">1</strong>/50</span>
+            </div>
+        </header>
+
+        <main id="quiz-container">
+            <!-- Questions loaded here -->
+        </main>
+
+        <div id="results" class="hidden">
+            <h2>🎊 Great Job!</h2>
+            <p>Final Score: <strong id="final-score">0</strong>/100</p>
+            <div id="grade"></div>
+            <button onclick="restartQuiz()">🔄 Try Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

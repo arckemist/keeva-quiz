@@ -1,0 +1,27 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Comic Sans MS', cursive; background: linear-gradient(135deg, #ff6b6b, #4ecdc4); min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+header { text-align: center; color: white; padding: 20px; }
+header h1 { font-size: 2.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.score-board { background: rgba(255,255,255,0.2); border-radius: 20px; padding: 15px; margin-top: 15px; display: flex; justify-content: center; gap: 30px; font-size: 1.2em; }
+.card { background: white; border-radius: 20px; padding: 25px; margin: 20px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.question { font-size: 1.3em; color: #333; margin-bottom: 20px; }
+.options { display: flex; flex-direction: column; gap: 12px; }
+.option { background: #f8f9fa; border: 3px solid #e9ecef; border-radius: 15px; padding: 15px 20px; cursor: pointer; transition: all 0.3s; font-size: 1.1em; }
+.option:hover { background: #e3f2fd; border-color: #2196f3; transform: translateX(5px); }
+.option.correct { background: #c8e6c9; border-color: #4caf50; }
+.option.wrong { background: #ffcdd2; border-color: #f44336; animation: shake 0.5s; }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-10px)} 75%{transform:translateX(10px)} }
+.fill-blank { display: flex; gap: 10px; flex-wrap: wrap; }
+.fill-blank input { flex: 1; min-width: 200px; padding: 15px; border: 3px solid #e9ecef; border-radius: 15px; font-size: 1.1em; font-family: inherit; }
+.fill-blank input:focus { outline: none; border-color: #2196f3; }
+.essay textarea { width: 100%; min-height: 120px; padding: 15px; border: 3px solid #e9ecef; border-radius: 15px; font-size: 1.1em; font-family: inherit; resize: vertical; }
+.next-btn { background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 15px 40px; border-radius: 30px; font-size: 1.2em; cursor: pointer; margin-top: 20px; transition: transform 0.3s; }
+.next-btn:hover { transform: scale(1.05); }
+.next-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.hidden { display: none; }
+#results { text-align: center; color: white; }
+#results h2 { font-size: 3em; margin-bottom: 20px; }
+#results button { background: white; color: #667eea; border: none; padding: 20px 50px; border-radius: 30px; font-size: 1.3em; cursor: pointer; margin-top: 30px; }
+.hidden { display: none !important; }
+.visible { display: block !important; }
