@@ -1,458 +1,70 @@
 {
   "student": "Keeva",
   "grade": "P2",
-  "subject": "Math",
-  "topic": "Picture Graphs, 3D Shapes & Money",
-  "source": "MPH 4th Edition WB-2B Units 12, 13, 14",
-  "date": "2026-04-21",
-  "totalQuestions": 50,
-  "passingScore": 95,
-  "passingPoints": 95,
+  "subject": "Celebrations & Holidays",
+  "topic": "Celebrations Around the World",
+  "source": "OCR Content - 22 April 2026",
+  "date": "2026-04-22",
+  "totalQuestions": 55,
+  "passingScore": 70,
+  "passingPoints": 70,
   "questions": [
-    {
-      "type": "mc",
-      "q": "The picture graph shows the number of fishballs five children ate.\nEach \ud83d\udc1f stands for 3 fishballs.\nAisha: 5 \ud83d\udc1f\nBen: 3 \ud83d\udc1f\nChris: 4 \ud83d\udc1f\nDinesh: 2 \ud83d\udc1f\nElla: 4 \ud83d\udc1f\n\nHow many fishballs did Aisha eat?",
-      "options": [
-        "5",
-        "15",
-        "3",
-        "8"
-      ],
-      "answer": 1,
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "mc",
-      "q": "Based on the fishballs picture graph:\nHow many fishballs did Ben and Chris eat altogether?",
-      "options": [
-        "12",
-        "21",
-        "7",
-        "15"
-      ],
-      "answer": 1,
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "mc",
-      "q": "Who ate the GREATEST number of fishballs?",
-      "options": [
-        "Ben",
-        "Chris",
-        "Aisha",
-        "Dinesh"
-      ],
-      "answer": 2,
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "mc",
-      "q": "The picture graph shows fruits Min bought.\nEach \ud83c\udf4e stands for 5 fruits.\nApples: 4 \ud83c\udf4e\nOranges: 3 \ud83c\udf4e\nBananas: 6 \ud83c\udf4e\n\nHow many more bananas than oranges did Min buy?",
-      "options": [
-        "3",
-        "15",
-        "9",
-        "6"
-      ],
-      "answer": 1,
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "mc",
-      "q": "If each \ud83d\udc1f stands for 4 items, and someone has 3 \ud83d\udc1f, how many items do they have?",
-      "options": [
-        "7",
-        "12",
-        "34",
-        "43"
-      ],
-      "answer": 1,
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "mc",
-      "q": "A picture graph shows: Dogs \ud83d\udc15: 6 \ud83d\udc15, Cats \ud83d\udc31: 4 \ud83d\udc31, Birds \ud83d\udc26: 8 \ud83d\udc26. Each \ud83d\udc26 stands for 2 animals.\nHow many birds are there?",
-      "options": [
-        "8",
-        "4",
-        "16",
-        "2"
-      ],
-      "answer": 2,
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "mc",
-      "q": "In the picture graph, if 3 stars \u2b50 equal 15 points, what does 1 star \u2b50 equal?",
-      "options": [
-        "3 points",
-        "5 points",
-        "15 points",
-        "45 points"
-      ],
-      "answer": 1,
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "mc",
-      "q": "A tally chart shows: \ud83d\udfe2\ud83d\udfe2\ud83d\udfe2\ud83d\udfe2 (4 groups of 5). How many total?",
-      "options": [
-        "4",
-        "5",
-        "9",
-        "20"
-      ],
-      "answer": 3,
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "mc",
-      "q": "In a picture graph, A has 4 circles \u25cf and B has 6 circles \u25cf. Each \u25cf = 2 items.\nHow many more items does B have than A?",
-      "options": [
-        "2",
-        "4",
-        "6",
-        "20"
-      ],
-      "answer": 1,
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "mc",
-      "q": "The picture graph shows toys sold:\nCars \ud83d\ude97: 5 \ud83d\ude97\nDolls \ud83e\uddf8: 3 \ud83e\uddf8\nBalls \u26bd: 7 \u26bd\nEach = 4 toys.\nHow many cars and dolls together?",
-      "options": [
-        "8",
-        "32",
-        "12",
-        "28"
-      ],
-      "answer": 1,
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "mc",
-      "q": "Which 3D shape has NO flat faces and NO vertices?",
-      "options": [
-        "Cube",
-        "Cone",
-        "Sphere",
-        "Cylinder"
-      ],
-      "answer": 2,
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "mc",
-      "q": "How many flat faces does a cube have?",
-      "options": [
-        "4",
-        "5",
-        "6",
-        "8"
-      ],
-      "answer": 2,
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "mc",
-      "q": "A cone has:\nHow many flat faces?",
-      "options": [
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
-      "answer": 1,
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "mc",
-      "q": "Which shape has 2 circular faces and 1 curved surface?",
-      "options": [
-        "Sphere",
-        "Cylinder",
-        "Cone",
-        "Cube"
-      ],
-      "answer": 1,
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "mc",
-      "q": "A cuboid is also called a:\nWhat is another name for cuboid?",
-      "options": [
-        "Square box",
-        "Rectangular box",
-        "Triangle box",
-        "Circle box"
-      ],
-      "answer": 1,
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "mc",
-      "q": "How many vertices does a triangular pyramid have?",
-      "options": [
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
-      "answer": 1,
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "mc",
-      "q": "Which of these is a cylinder?\n\n(1) \ufffd\u7f50 (can)\n(2) \ud83d\udce6 (box)\n(3) \ud83c\udf88 (balloon)\n(4) \ud83e\uddca (ice cube)",
-      "options": [
-        "1 only",
-        "2 only",
-        "3 only",
-        "4 only"
-      ],
-      "answer": 0,
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "mc",
-      "q": "A dice (cube) has how many EDGES?",
-      "options": [
-        "6",
-        "8",
-        "10",
-        "12"
-      ],
-      "answer": 3,
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "mc",
-      "q": "How do you write $5.50 in words?",
-      "options": [
-        "Five dollars fifty cents",
-        "Five hundred fifty cents",
-        "Five point five dollars",
-        "Fifty-five dollars"
-      ],
-      "answer": 0,
-      "unit": "Money"
-    },
-    {
-      "type": "mc",
-      "q": "Ali has $12.30 and buys a book for $8.50. How much change does he get?",
-      "options": [
-        "$3.80",
-        "$4.20",
-        "$3.20",
-        "$4.80"
-      ],
-      "answer": 0,
-      "unit": "Money"
-    },
-    {
-      "type": "mc",
-      "q": "Which is the GREATEST amount?\n$3.45, $3.54, $3.40, $3.05",
-      "options": [
-        "$3.45",
-        "$3.54",
-        "$3.40",
-        "$3.05"
-      ],
-      "answer": 1,
-      "unit": "Money"
-    },
-    {
-      "type": "mc",
-      "q": "A toy costs $15.80. If you pay with a $20 note, how much change will you get?",
-      "options": [
-        "$4.20",
-        "$5.20",
-        "$4.80",
-        "$5.80"
-      ],
-      "answer": 0,
-      "unit": "Money"
-    },
-    {
-      "type": "mc",
-      "q": "How much is 3 ten-dollar notes and 5 one-dollar coins?",
-      "options": [
-        "$35",
-        "$8",
-        "$53",
-        "$15"
-      ],
-      "answer": 0,
-      "unit": "Money"
-    },
-    {
-      "type": "mc",
-      "q": "Sara bought 2 pencils at $1.20 each. How much did she pay?",
-      "options": [
-        "$1.20",
-        "$2.40",
-        "$2.20",
-        "$3.20"
-      ],
-      "answer": 1,
-      "unit": "Money"
-    },
-    {
-      "type": "mc",
-      "q": "Which shows the correct order from LEAST to GREATEST?\n$2.05, $2.50, $2.30, $2.15",
-      "options": [
-        "$2.05, $2.15, $2.30, $2.50",
-        "$2.50, $2.30, $2.15, $2.05",
-        "$2.05, $2.30, $2.15, $2.50",
-        "$2.15, $2.05, $2.30, $2.50"
-      ],
-      "answer": 0,
-      "unit": "Money"
-    },
-    {
-      "type": "fill",
-      "q": "In a picture graph, each \ud83c\udf4e stands for 4 apples. If there are 5 \ud83c\udf4e, the total number of apples is ___.",
-      "answer": "20",
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "fill",
-      "q": "The picture graph shows: Cats \ud83d\udc31: 3 \ud83d\udc31, Dogs \ud83d\udc15: 5 \ud83d\udc15. Each = 2 animals.\nThe total number of cats and dogs is ___.",
-      "answer": "16",
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "fill",
-      "q": "A tally chart shows: \ud83d\udfe2\ud83d\udfe2\ud83d\udfe2\ud83d\udfe2\ud83d\udfe2 (5 groups of 5). The total is ___.",
-      "answer": "25",
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "fill",
-      "q": "In a picture graph where each \u2605 = 6 points, 4 stars = ___ points.",
-      "answer": "24",
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "fill",
-      "q": "Sarah collected 20 seashells. She puts them in groups of 5. Each \ud83d\udc1a = 5.\nShe has ___ \ud83d\udc1a",
-      "answer": "4",
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "fill",
-      "q": "In a picture graph, the scale shows 1 \ud83d\udcda = 3 books.\n4 \ud83d\udcda = ___ books.",
-      "answer": "12",
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "fill",
-      "q": "A picture graph shows: Oranges \ud83c\udf4a: 6 \ud83c\udf4a, Apples \ud83c\udf4e: 4 \ud83c\udf4a.\nEach = 2 fruits.\nOranges total: ___ fruits.",
-      "answer": "12",
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "fill",
-      "q": "A cube has ___ flat faces.",
-      "answer": "6",
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "fill",
-      "q": "A cone has ___ flat face.",
-      "answer": "1",
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "fill",
-      "q": "A triangular pyramid has ___ vertices.",
-      "answer": "4",
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "fill",
-      "q": "A cuboid has ___ edges.",
-      "answer": "12",
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "fill",
-      "q": "A sphere has ___ flat faces.",
-      "answer": "0",
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "fill",
-      "q": "A cylinder has ___ curved surface(s).",
-      "answer": "1",
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "fill",
-      "q": "A cube has ___ vertices.",
-      "answer": "8",
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "fill",
-      "q": "$3.75 means ___ dollars and ___ cents.",
-      "answer": "3 dollars and 75 cents",
-      "unit": "Money"
-    },
-    {
-      "type": "fill",
-      "q": "100 cents = ___ dollar.",
-      "answer": "1",
-      "unit": "Money"
-    },
-    {
-      "type": "fill",
-      "q": "$5.05 in words is ___ dollars and ___ cents.",
-      "answer": "5 dollars and 5 cents",
-      "unit": "Money"
-    },
-    {
-      "type": "fill",
-      "q": "Three $10 notes = $___.",
-      "answer": "30",
-      "unit": "Money"
-    },
-    {
-      "type": "fill",
-      "q": "$10 - $3.50 = $___.",
-      "answer": "6.50",
-      "unit": "Money"
-    },
-    {
-      "type": "fill",
-      "q": "A cake costs $8.90. With $10, the change is $___.",
-      "answer": "1.10",
-      "unit": "Money"
-    },
-    {
-      "type": "essay",
-      "q": "A picture graph shows the number of books read by 4 students in a month:\n- Amy: 4 \ud83d\udcda\n- Ben: 6 \ud83d\udcda\n- Cara: 3 \ud83d\udcda\n- Dan: 5 \ud83d\udcda\n\nEach \ud83d\udcda = 2 books.\n\nTask: How many books did each student read? Who read the most? Who read the fewest? Show your working.",
-      "unit": "Picture Graphs"
-    },
-    {
-      "type": "essay",
-      "q": "Lisa bought 3 pencils at $1.50 each and 2 erasers at $0.80 each.\n\nTask: How much did Lisa spend altogether? If she paid with a $10 note, how much change did she get? Show your working.",
-      "unit": "Money"
-    },
-    {
-      "type": "essay",
-      "q": "Look at these 3D shapes: a cube, a cylinder, and a cone.\n\nTask: Describe the differences between these three shapes. How many flat faces does each have? Which one can roll? Explain why.",
-      "unit": "3D Shapes"
-    },
-    {
-      "type": "essay",
-      "q": "A shop sold:\n- 4 boxes of crayons at $5.60 each\n- 3 notebooks at $2.30 each\n\nTask: Calculate the total amount spent by customers who bought all these items. Show your working step by step.",
-      "unit": "Money"
-    },
-    {
-      "type": "essay",
-      "q": "Study the picture graph below:\n\nFavorite Fruits:\n\ud83c\udf4e\ud83c\udf4e\ud83c\udf4e\ud83c\udf4e\ud83c\udf4e (Apples)\n\ud83c\udf4a\ud83c\udf4a\ud83c\udf4a\ud83c\udf4a (Oranges)\n\ud83c\udf4c\ud83c\udf4c\ud83c\udf4c\ud83c\udf4c\ud83c\udf4c\ud83c\udf4c (Bananas)\n\ud83c\udf47\ud83c\udf47\ud83c\udf47 (Grapes)\n\nEach fruit icon = 2 votes.\n\nTask: How many people voted for apples? Which fruit is the most popular? How many more votes for bananas than oranges? Show your working.",
-      "unit": "Picture Graphs"
-    }
+    {"type": "mc", "q": "When is New Year's Day celebrated in Indonesia?", "options": ["1 January", "17 August", "1 May", "25 December"], "answer": 0, "unit": "Indonesian Historical Holidays"},
+    {"type": "mc", "q": "Indonesia's Independence Day is celebrated on:", "options": ["10 November", "28 October", "17 August", "1 January"], "answer": 2, "unit": "Indonesian Historical Holidays"},
+    {"type": "mc", "q": "Heroes Day (Hari Pahlawan) in Indonesia is on:", "options": ["10 November", "17 August", "28 October", "20 May"], "answer": 0, "unit": "Indonesian Historical Holidays"},
+    {"type": "mc", "q": "The Youth Pledge (Sumpah Pemuda) is commemorated on:", "options": ["28 October", "17 August", "10 November", "1 January"], "answer": 0, "unit": "Indonesian Historical Holidays"},
+    {"type": "mc", "q": "What is the HinduBalinese celebration called?", "options": ["Ramadan", "Galungan", "Easter", "Lunar New Year"], "answer": 1, "unit": "Indonesian Religious Holidays"},
+    {"type": "mc", "q": "When does Galungan usually occur in the Balinese calendar?", "options": ["Every 210 days", "Once a year", "Every month", "Every 5 years"], "answer": 0, "unit": "Indonesian Religious Holidays"},
+    {"type": "mc", "q": "Kuningan comes _____ after Galungan.", "options": ["10 days", "20 days", "30 days", "5 days"], "answer": 0, "unit": "Indonesian Religious Holidays"},
+    {"type": "mc", "q": "Hina Matsuri is also known as:", "options": ["Doll Festival", "Flower Festival", "Star Festival", "Moon Festival"], "answer": 0, "unit": "World Celebrations"},
+    {"type": "mc", "q": "Hina Matsuri is celebrated on:", "options": ["3 March", "1 January", "17 August", "25 December"], "answer": 0, "unit": "World Celebrations"},
+    {"type": "mc", "q": "Chinese New Year is also called:", "options": ["Lunar New Year", "Solar New Year", "Western New Year", "Independence Day"], "answer": 0, "unit": "World Celebrations"},
+    {"type": "mc", "q": "May Day is celebrated on:", "options": ["1 May", "1 January", "17 August", "28 October"], "answer": 0, "unit": "World Celebrations"},
+    {"type": "mc", "q": "Which country celebrates Hina Matsuri?", "options": ["Japan", "Indonesia", "China", "India"], "answer": 0, "unit": "World Celebrations"},
+    {"type": "mc", "q": "What do Hindu Balinese people celebrate?", "options": ["Galungan", "Chinese New Year", "May Day", "Independence Day"], "answer": 0, "unit": "Indonesian Religious Holidays"},
+    {"type": "mc", "q": "Vijay's ancestors came from which country?", "options": ["India", "China", "Indonesia", "Japan"], "answer": 0, "unit": "Vijay's Story"},
+    {"type": "mc", "q": "Vijay's family migrated to find better:", "options": ["Opportunities", "Beaches", "Food", "Weather"], "answer": 0, "unit": "Vijay's Story"},
+    {"type": "mc", "q": "What is celebrated on 17 August in Indonesia?", "options": ["Independence Day", "New Year's Day", "Heroes Day", "Youth Day"], "answer": 0, "unit": "Indonesian Historical Holidays"},
+    {"type": "mc", "q": "How many public holidays does Indonesia have?", "options": ["More than 10", "Only 1", "Exactly 5", "None"], "answer": 0, "unit": "Indonesian Historical Holidays"},
+    {"type": "mc", "q": "The Youth Pledge was declared in:", "options": ["1928", "1945", "1950", "1910"], "answer": 0, "unit": "Indonesian Historical Holidays"},
+    {"type": "mc", "q": "During Galungan, Balinese people pray at:", "options": ["Temple", "Church", "Mosque", "Park"], "answer": 0, "unit": "Indonesian Religious Holidays"},
+    {"type": "mc", "q": "Which celebration uses dolls or figurines?", "options": ["Hina Matsuri", "Galungan", "Independence Day", "May Day"], "answer": 0, "unit": "World Celebrations"},
+    {"type": "mc", "q": "May Day is a holiday for:", "options": ["Workers", "Children", "Teachers", "Doctors"], "answer": 0, "unit": "World Celebrations"},
+    {"type": "mc", "q": "Chinese New Year is based on which calendar?", "options": ["Lunar", "Solar", "Gregorian", "Julian"], "answer": 0, "unit": "World Celebrations"},
+    {"type": "mc", "q": "Heroes Day honors Indonesian:", "options": ["National heroes", "Foreign leaders", "Children", "Animals"], "answer": 0, "unit": "Indonesian Historical Holidays"},
+    {"type": "mc", "q": "The Sumpah Pemuda was about Indonesian:", "options": ["Youth unity", "Independence", "Education", "Religion"], "answer": 0, "unit": "Indonesian Historical Holidays"},
+    {"type": "mc", "q": "What symbolizes the end of Galungan celebrations?", "answer": 0, "unit": "Indonesian Religious Holidays"},
+    {"type": "mc", "q": "Hina Matsuri is especially important for:", "options": ["Girls and families", "Boys only", "Elderly", "Soldiers"], "answer": 0, "unit": "World Celebrations"},
+    {"type": "mc", "q": "Vijay's family left their home country to:", "options": ["Seek better opportunities", "Visit relatives", "Go on vacation", "Study"], "answer": 0, "unit": "Vijay's Story"},
+    {"type": "mc", "q": "Galungan celebrates the victory of:", "options": ["Good over evil", "War over peace", "Rich over poor", "Young over old"], "answer": 0, "unit": "Indonesian Religious Holidays"},
+    {"type": "mc", "q": "Which holiday is on 28 October?", "options": ["Youth Pledge Day", "Independence Day", "New Year", "Labor Day"], "answer": 0, "unit": "Indonesian Historical Holidays"},
+    {"type": "mc", "q": "During Kuningan, Balinese people offer:", "options": ["Prayers and offerings", "Money to government", "Food to animals", "Books to library"], "answer": 0, "unit": "Indonesian Religious Holidays"},
+
+    {"type": "fill", "q": "New Year's Day is celebrated on _____ January.", "answer": "1", "unit": "Indonesian Historical Holidays"},
+    {"type": "fill", "q": "Indonesia celebrates its Independence Day on _____ August.", "answer": "17", "unit": "Indonesian Historical Holidays"},
+    {"type": "fill", "q": "Heroes Day is on _____ November.", "answer": "10", "unit": "Indonesian Historical Holidays"},
+    {"type": "fill", "q": "The Youth Pledge (Sumpah Pemuda) is on _____ October.", "answer": "28", "unit": "Indonesian Historical Holidays"},
+    {"type": "fill", "q": "Hina Matsuri is celebrated on _____ March.", "answer": "3", "unit": "World Celebrations"},
+    {"type": "fill", "q": "May Day is on _____ May.", "answer": "1", "unit": "World Celebrations"},
+    {"type": "fill", "q": "The Hindu Balinese celebration is called _____.", "answer": "Galungan", "unit": "Indonesian Religious Holidays"},
+    {"type": "fill", "q": "Kuningan comes 10 days _____ Galungan.", "answer": "after", "unit": "Indonesian Religious Holidays"},
+    {"type": "fill", "q": "Hina Matsuri is also known as the Doll _____ .", "answer": "Festival", "unit": "World Celebrations"},
+    {"type": "fill", "q": "Chinese New Year is also called _____ New Year.", "answer": "Lunar", "unit": "World Celebrations"},
+    {"type": "fill", "q": "Vijay's ancestors came from _____ .", "answer": "India", "unit": "Vijay's Story"},
+    {"type": "fill", "q": "Indonesia has more than _____ public holidays.", "answer": "10", "unit": "Indonesian Historical Holidays"},
+    {"type": "fill", "q": "The Youth Pledge was declared in _____ .", "answer": "1928", "unit": "Indonesian Historical Holidays"},
+    {"type": "fill", "q": "Balinese people pray at the _____ during Galungan.", "answer": "temple", "unit": "Indonesian Religious Holidays"},
+    {"type": "fill", "q": "Hina Matsuri is celebrated in _____ .", "answer": "Japan", "unit": "World Celebrations"},
+    {"type": "fill", "q": "May Day honors _____ .", "answer": "workers", "unit": "World Celebrations"},
+    {"type": "fill", "q": "Indonesia gained independence in _____ .", "answer": "1945", "unit": "Indonesian Historical Holidays"},
+    {"type": "fill", "q": "The festival celebrating good over evil is called _____.", "answer": "Galungan", "unit": "Indonesian Religious Holidays"},
+    {"type": "fill", "q": "Vijay's family migrated to find better _____.", "answer": "opportunities", "unit": "Vijay's Story"},
+    {"type": "fill", "q": "Galungan happens every _____ days in the Balinese calendar.", "answer": "210", "unit": "Indonesian Religious Holidays"},
+
+    {"type": "essay", "q": "Why do you think it's important to celebrate national holidays like Independence Day and Heroes Day? Write at least 3 sentences.", "answer": "", "unit": "Indonesian Historical Holidays"},
+    {"type": "essay", "q": "Compare Hina Matsuri (Japan) and Galungan (Bali, Indonesia). How are they similar and different? Write at least 4 sentences.", "answer": "", "unit": "World Celebrations"},
+    {"type": "essay", "q": "Why do people migrate to different countries? Using Vijay's family as an example, explain why his ancestors moved. Write at least 3 sentences.", "answer": "", "unit": "Vijay's Story"},
+    {"type": "essay", "q": "Think about a celebration you enjoy with your family. Describe what you do, why it is special, and how it makes you feel. Write at least 4 sentences.", "answer": "", "unit": "Personal Reflection"},
+    {"type": "essay", "q": "Indonesian public holidays include Independence Day (17 August), Heroes Day (10 November), and Youth Pledge Day (28 October). Why do you think we need so many holidays to remember our history? Write at least 3 sentences.", "answer": "", "unit": "Indonesian Historical Holidays"}
   ]
 }
