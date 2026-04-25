@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KeeVa's Quiz - Celebrations & Holidays P2</title>
+    <title>KeeVa's Quiz - 25 April 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
@@ -13,13 +13,15 @@
         header .subtitle { font-size: 1.1em; opacity: 0.9; }
         header .info { font-size: 0.95em; opacity: 0.85; margin-top: 8px; }
         .score-board { background: rgba(255,255,255,0.15); border-radius: 20px; padding: 15px 25px; margin-top: 15px; display: inline-flex; gap: 30px; font-size: 1.1em; backdrop-filter: blur(10px); }
-        .card { background: white; border-radius: 20px; padding: 25px; margin: 20px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+        .card { background: white; border-radius: 20px; padding: 25px; margin: 20px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.15); animation: slideIn 0.4s ease-out; }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
         .section-label { display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; font-weight: 600; margin-bottom: 15px; }
         .section-mc { background: #e3f2fd; color: #1565c0; }
         .section-fill { background: #fff3e0; color: #e65100; }
         .section-essay { background: #f3e5f5; color: #7b1fa2; }
         .unit-label { display: inline-block; padding: 3px 10px; background: #f5f5f5; color: #666; border-radius: 10px; font-size: 0.8em; margin-bottom: 15px; }
-        .question { font-size: 1.15em; color: #333; margin-bottom: 20px; line-height: 1.6; white-space: pre-line; }
+        .question { font-size: 1.15em; color: #333; margin-bottom: 20px; line-height: 1.6; white-space: pre-wrap; }
+        .q-image { display: block; max-width: 320px; margin: 0 auto 20px auto; border-radius: 15px; }
         .options { display: flex; flex-direction: column; gap: 12px; }
         .option { background: #f8f9fa; border: 3px solid #e9ecef; border-radius: 15px; padding: 15px 20px; cursor: pointer; transition: all 0.3s; font-size: 1.05em; }
         .option:hover { background: #e3f2fd; border-color: #2196f3; transform: translateX(5px); }
@@ -27,8 +29,7 @@
         .option.wrong { background: #ffcdd2; border-color: #f44336; animation: shake 0.5s; }
         .option.disabled { pointer-events: none; }
         @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-10px)} 75%{transform:translateX(10px)} }
-        .fill-blank { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-        .fill-blank input { flex: 1; min-width: 200px; padding: 15px; border: 3px solid #e9ecef; border-radius: 15px; font-size: 1.1em; }
+        .fill-blank input { width: 100%; padding: 15px; border: 3px solid #e9ecef; border-radius: 15px; font-size: 1.1em; margin-bottom: 15px; }
         .fill-blank input:focus { outline: none; border-color: #ff9800; }
         .essay textarea { width: 100%; min-height: 120px; padding: 15px; border: 3px solid #e9ecef; border-radius: 15px; font-size: 1.1em; resize: vertical; font-family: inherit; }
         .btn { background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 15px 40px; border-radius: 30px; font-size: 1.1em; cursor: pointer; margin-top: 20px; transition: transform 0.3s, box-shadow 0.3s; }
@@ -41,6 +42,7 @@
         .pass-status { font-size: 1.5em; padding: 10px 30px; border-radius: 30px; display: inline-block; margin: 20px 0; }
         .pass { background: #4caf50; }
         .fail { background: #f44336; }
+        .review-container { max-height: 60vh; overflow-y: auto; margin-top: 20px; padding: 10px; }
         .review-item { background: white; border-radius: 15px; padding: 20px; margin: 15px 0; text-align: left; color: #333; }
         .review-item h4 { margin-bottom: 10px; color: #667eea; }
         .review-item.correct-review { border-left: 5px solid #4caf50; }
@@ -56,27 +58,157 @@
         .next-btn { background: linear-gradient(135deg, #ff6b6b, #4ecdc4); color: white; border: none; padding: 12px 30px; border-radius: 25px; font-size: 1em; cursor: pointer; margin-top: 15px; }
         .submit-quiz-btn { background: linear-gradient(135deg, #4caf50, #2e7d32); color: white; border: none; padding: 18px 50px; border-radius: 30px; font-size: 1.2em; cursor: pointer; margin-top: 30px; }
         .points-info { font-size: 0.9em; opacity: 0.9; margin-top: 5px; }
+        .correct-feedback { margin-top: 10px; padding: 10px; background: #e8f5e9; border-radius: 10px; color: #2e7d32; }
+        .wrong-feedback { margin-top: 10px; padding: 10px; background: #ffebee; border-radius: 10px; color: #c62828; }
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            header h1 { font-size: 1.6em; }
+            .card { padding: 15px; margin: 10px 0; }
+            .question { font-size: 1em; }
+            .score-board { flex-direction: column; gap: 10px; padding: 10px 15px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🎉 KeeVa's Celebrations Quiz!</h1>
-            <p class="subtitle">P2 | Celebrations Around the World</p>
-            <p class="info">22 April 2026 | OCR Content</p>
+            <h1>📚 KeeVa's Maths Quiz!</h1>
+            <p class="subtitle">P2 | Unit 11: Volume + Unit 12: Picture Graphs</p>
+            <p class="info">25 April 2026</p>
             <div class="score-board">
                 <span>Score: <strong id="score">0</strong>/100</span>
                 <span>Question: <strong id="q-num">1</strong>/55</span>
             </div>
             <div class="progress-bar"><div class="progress-fill" id="progress" style="width:0%"></div></div>
-            <p class="points-info">MC: 2pts each | Fill: 2pts each | Essay: 10pts each</p>
+            <p class="points-info">MC: 2pts (30 questions) | Fill: 2pts (20 questions) | Essay: Submit for Review (5 questions)</p>
         </header>
         <main id="quiz-container"></main>
         <div id="results" class="hidden"></div>
     </div>
 
     <script>
-    let quizData = null;
+    const quizData = {
+        title: "25 April 2026",
+        passingScore: 85,
+        questions: [
+            // ==================== MULTIPLE CHOICE (30 questions) ====================
+            // Q1 (MC, Volume, IMAGE)
+            { type: "mc", unit: "Unit 11: Volume", q: "Water from three different containers was poured into same-size glasses. Container A filled 7 glasses. Container B filled 4 glasses. Container C filled 9 glasses. Which container had the GREATEST volume of water?", options: ["Container A", "Container B", "Container C", "Cannot tell"], answer: 2, image: "https://storage.imagerouter.io/8e553e20-e148-4861-9169-656c435bd073.webp" },
+            // Q2 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "What is volume measured in?", options: ["Grams", "Litres", "Metres", "Seconds"], answer: 1 },
+            // Q3 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Tank A has 5 units of water. Tank B has 3 units of water. Tank C has 8 units of water. Which tank has the SMALLEST volume?", options: ["Tank A", "Tank B", "Tank C", "Cannot tell"], answer: 1 },
+            // Q4 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Jar A contains 6 litres of water. Jar B contains 9 litres of water. Jar C contains 4 litres of water. Arrange the jars from GREATEST volume to SMALLEST volume.", options: ["A, B, C", "B, A, C", "C, B, A", "B, C, A"], answer: 1 },
+            // Q5 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Ben has a bottle with 4 litres of juice. Amy has a bottle with 6 litres of juice. How many more litres of juice does Amy have than Ben?", options: ["2L", "10L", "24L", "1L"], answer: 0 },
+            // Q6 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "A petrol tank had 23 litres of petrol at first. Ms Aini pumped 26 litres of petrol into the tank. How much petrol was there in the tank altogether?", options: ["49L", "3L", "46L", "48L"], answer: 0 },
+            // Q7 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Kai drinks 3 litres of water every day. How many litres of water does he drink from Monday to Friday?", options: ["8L", "15L", "12L", "5L"], answer: 1 },
+            // Q8 (MC, IMAGE)
+            { type: "mc", unit: "Unit 11: Volume", q: "Look at the measuring jug shown. Each marking represents 1 litre. What volume of liquid is in the jug?", options: ["5L", "6L", "7L", "8L"], answer: 2, image: "https://storage.imagerouter.io/52558855-5aec-4516-bf49-b5ab3251dcc3.webp" },
+            // Q9 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Gary delivers 6 litres of milk to each of 4 families. How many litres of milk does Gary deliver in all?", options: ["24L", "10L", "2L", "67L"], answer: 0 },
+            // Q10 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Alex and Marie sold 80 litres of lemonade in total. Marie sold 34 litres of lemonade. How many litres of lemonade did Alex sell?", options: ["46L", "114L", "54L", "44L"], answer: 0 },
+            // Q11 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Bella sold a total of 24 litres of juice over 3 days. She sold an equal amount each day. How many litres of juice did Bella sell each day?", options: ["6L", "8L", "7L", "12L"], answer: 1 },
+            // Q12 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Tank A contains 247 litres of water. Tank B contains 192 litres of water less than Tank A. How many litres does Tank B contain?", options: ["55L", "145L", "65L", "53L"], answer: 0 },
+            // Q13 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Container A has 8 units of water. Container B has 6 units of water. Container C has 11 units of water. Which is TRUE?", options: ["A > B", "B > C", "C > A", "A > C"], answer: 2 },
+            // Q14 (MC)
+            { type: "mc", unit: "Unit 12: Picture Graphs", q: "The picture graph shows time spent on activities. Each circle = 10 minutes. Swimming = 3 circles, Reading = 3 circles, Painting = 2.5 circles, Cycling = 4 circles, Homework = 5 circles. Which activity took the MOST time?", options: ["Swimming", "Reading", "Cycling", "Homework"], answer: 3 },
+            // Q15 (MC)
+            { type: "mc", unit: "Unit 12: Picture Graphs", q: "Kai makes a tally chart for insects: Butterfly = 8 tally marks, Grasshopper = 12 tally marks, Caterpillar = 16 tally marks. Each diamond in the picture graph = 4 insects. How many diamonds should be drawn for Butterflies?", options: ["4", "2", "8", "32"], answer: 1 },
+            // Q16 (MC, IMAGE)
+            { type: "mc", unit: "Unit 12: Picture Graphs", q: "The picture graph shows the number of fishballs five children ate in a month. Each circle stands for 3 fishballs. Who ate the GREATEST number of fishballs?\n\nAisha: 5 circles | Ben: 3 circles | Chris: 6 circles | Dinesh: 4 circles | Ella: 2 circles", options: ["Aisha", "Ben", "Chris", "Dinesh"], answer: 2, image: "https://storage.imagerouter.io/db9c84bf-c7c2-4605-8bf4-c972e4ca5e0a.webp" },
+            // Q17 (MC)
+            { type: "mc", unit: "Unit 12: Picture Graphs", q: "The picture graph shows the number of fruits Min bought. Each triangle = 2 fruits. Apples = 6 triangles, Mangoes = 7.5 triangles, Pears = 4 triangles, Oranges = 3 triangles. Which fruit did Min buy the MOST of?", options: ["Apples", "Mangoes", "Pears", "Oranges"], answer: 1 },
+            // Q18 (MC)
+            { type: "mc", unit: "Unit 12: Picture Graphs", q: "The picture graph shows the number of cans four children collected. Each star = 4 cans. Paul = 9 stars, Raj = 7 stars, Sue = 10 stars, Lin = 6 stars. Who collected the MOST cans?", options: ["Paul", "Raj", "Sue", "Lin"], answer: 2 },
+            // Q19 (MC)
+            { type: "mc", unit: "Unit 12: Picture Graphs", q: "The picture graph shows the number of tokens four children have. Each circle = 10 tokens. Dan = 3 circles, Carl = 2 circles, Aida = 4 circles, Belle = 5 circles. How many MORE tokens does Belle have than Aida?", options: ["10 tokens", "50 tokens", "5 tokens", "1 token"], answer: 0 },
+            // Q20 (MC)
+            { type: "mc", unit: "Unit 12: Picture Graphs", q: "A tally chart shows: Swimming = 12 tally marks, Cycling = 8 tally marks, Running = 16 tally marks. Each star in the picture graph = 4 children. How many stars should be drawn for Swimming?", options: ["12", "3", "4", "8"], answer: 1 },
+            // Q21 (MC)
+            { type: "mc", unit: "Unit 12: Picture Graphs", q: "The picture graph shows pupils' bed times. Each circle = 4 pupils. 8:00 pm = 2 circles, 8:30 pm = 3 circles, 9:00 pm = 4 circles, 9:30 pm = 6 circles. How many pupils go to bed at 9:30 pm?", options: ["6 pupils", "24 pupils", "4 pupils", "2 pupils"], answer: 1 },
+            // Q22 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "A chef bought 40 litres of cooking oil. He used 32 litres. How much cooking oil does he have left?", options: ["8L", "12L", "6L", "72L"], answer: 0 },
+            // Q23 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Farah collected 36 litres of rainwater and poured it equally into 4 pails. How many litres were in each pail?", options: ["6L", "9L", "8L", "4L"], answer: 1 },
+            // Q24 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Greg buys 8 bottles of oil. Each bottle contains 2 litres. How many litres of oil does Greg buy in all?", options: ["10L", "16L", "8L", "14L"], answer: 1 },
+            // Q25 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Zara had 154 litres of water. Lill had 108 litres of water. How many litres of water did they have in TOTAL?", options: ["252L", "262L", "242L", "246L"], answer: 1 },
+            // Q26 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Container A has 95 litres. Container B has 53 litres more than Container A. How many litres does Container B have?", options: ["142L", "148L", "138L", "152L"], answer: 1 },
+            // Q27 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "A painter buys 35 litres of paint in total. Each tin holds 5 litres. How many tins of paint does the painter buy?", options: ["5 tins", "7 tins", "6 tins", "8 tins"], answer: 1 },
+            // Q28 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Mr Tan has 112 litres of paint. Mr Adil has 59 litres less than Mr Tan. How many litres does Mr Adil have?", options: ["53L", "63L", "43L", "57L"], answer: 0 },
+            // Q29 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Container P has 12 litres. Container Q has 7 litres. How many more litres does Container P have than Container Q?", options: ["5L", "19L", "7L", "17L"], answer: 0 },
+            // Q30 (MC)
+            { type: "mc", unit: "Unit 11: Volume", q: "Arrange these volumes from GREATEST to LEAST: 4L, 9L, 1L, 7L.", options: ["9L, 7L, 4L, 1L", "1L, 4L, 7L, 9L", "7L, 9L, 1L, 4L", "4L, 1L, 7L, 9L"], answer: 0 },
+
+            // ==================== FILL IN THE BLANK (20 questions) ====================
+            // Q31 (Fill)
+            { type: "fill", unit: "Unit 11: Volume", q: "Container X has 7 glasses of water. Container Y has 3 glasses of water. Container X has _______ more glasses of water than Container Y.", answer: "4" },
+            // Q32 (Fill)
+            { type: "fill", unit: "Unit 11: Volume", q: "Tank P has 8 units of water. Tank Q has 5 units of water. Tank P has _______ more units of water than Tank Q.", answer: "3" },
+            // Q33 (Fill)
+            { type: "fill", unit: "Unit 11: Volume", q: "Arrange these volumes from GREATEST to LEAST: 9L, 3L, 7L. Write the answer as: ___, ___, ___", answer: "9L, 7L, 3L" },
+            // Q34 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "In the time graph, Swimming = 3 circles. Each circle = 10 minutes. Sam spent _______ minutes swimming.", answer: "30" },
+            // Q35 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "In the same time graph, Cycling = 4 circles. Each circle = 10 minutes. Sam spent _______ minutes cycling.", answer: "40" },
+            // Q36 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "In the same time graph, Painting is shown as 2 full circles and 1 half circle. Each circle = 10 minutes. Sam spent _______ minutes painting.", answer: "25" },
+            // Q37 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "Reading = 3 circles and Cycling = 4 circles. Each circle = 10 minutes. Sam spent _______ more minutes cycling than reading.", answer: "10" },
+            // Q38 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "Swimming = 3 circles and Cycling = 4 circles. Each circle = 10 minutes. Sam spent a total of _______ minutes on swimming and cycling.", answer: "70" },
+            // Q39 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "Reading = 3 circles and Homework = 5 circles. Each circle = 10 minutes. Sam spent a total of _______ minutes on reading and homework.", answer: "80" },
+            // Q40 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "In the insect survey, Grasshopper = 12 tally marks. Each diamond = 4 insects. _______ diamonds should be drawn for Grasshoppers.", answer: "3" },
+            // Q41 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "In the same insect survey, Caterpillar = 16 tally marks. Each diamond = 4 insects. _______ diamonds should be drawn for Caterpillars.", answer: "4" },
+            // Q42 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "In the cans graph, Lin has 6 stars. Each star = 4 cans. Lin collected _______ cans.", answer: "24" },
+            // Q43 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "In the same cans graph, Raj has 7 stars. Each star = 4 cans. Raj collected _______ cans.", answer: "28" },
+            // Q44 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "Sue has 10 stars and Raj has 7 stars. Each star = 4 cans. Sue collected _______ more cans than Raj.", answer: "12" },
+            // Q45 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "Paul collected 9 stars. Each star = 4 cans. Paul collected _______ cans.", answer: "36" },
+            // Q46 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "Dan has 3 circles. Each circle = 10 tokens. Dan has _______ tokens.", answer: "30" },
+            // Q47 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "Carl has 2 circles. Each circle = 10 tokens. Carl has _______ tokens.", answer: "20" },
+            // Q48 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "In the bedtimes graph, 9:30 pm = 6 circles. Each circle = 4 pupils. _______ pupils go to bed at 9:30 pm.", answer: "24" },
+            // Q49 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "In the bedtimes graph, 8:30 pm = 3 circles and 9:00 pm = 4 circles. Each circle = 4 pupils. _______ more pupils go to bed at 9:00 pm than at 8:30 pm.", answer: "4" },
+            // Q50 (Fill)
+            { type: "fill", unit: "Unit 12: Picture Graphs", q: "Arrange these picture graph counts from GREATEST to LEAST: swimming 12 tally (star=4), cycling 8 tally (star=4), running 16 tally (star=4). In symbols: Swimming = 3 stars, Cycling = 2 stars, Running = 4 stars. Write: ___, ___, ___", answer: "4 stars (Running), 3 stars (Swimming), 2 stars (Cycling)" },
+
+            // ==================== ESSAY (5 questions) ====================
+            // Q51 (Essay)
+            { type: "essay", unit: "Unit 11: Volume", q: "Volume Word Problem.\nA petrol tank had 23 litres of petrol. Ms Aini pumped 26 litres more into the tank. Then, Ben used 15 litres from the tank. How much petrol is left in the tank?\nShow your working.", answer: "23 + 26 = 49 litres\n49 - 15 = 34 litres\nAnswer: 34 litres" },
+            // Q52 (Essay)
+            { type: "essay", unit: "Unit 12: Picture Graphs", q: "Picture Graph Analysis.\nThe picture graph shows the number of books read by four children in a month. Each circle = 5 books.\nAmy = 4 circles, Ben = 6 circles, Chloe = 3 circles, Dan = 8 circles.\nAnswer these questions:\n(a) How many books did Ben read?\n(b) Who read the most books?\n(c) How many more books did Dan read than Amy?\n(d) How many books did they read in total?", answer: "(a) 6 x 5 = 30 books\n(b) Dan (8 x 5 = 40 books)\n(c) Dan: 40, Amy: 20, difference = 20 more books\n(d) Amy: 20 + Ben: 30 + Chloe: 15 + Dan: 40 = 105 books total" },
+            // Q53 (Essay)
+            { type: "essay", unit: "Unit 11: Volume", q: "Volume Comparison.\nContainer A has 47 litres of water. Container B has 29 litres of water. Container C has 58 litres of water.\n(a) Which container has the most water?\n(b) Which container has the least water?\n(c) What is the difference between the most and the least?", answer: "(a) Container C has the most (58 litres)\n(b) Container B has the least (29 litres)\n(c) 58 - 29 = 29 litres difference" },
+            // Q54 (Essay)
+            { type: "essay", unit: "Unit 12: Picture Graphs", q: "Picture Graph Interpretation.\nA picture graph shows the number of pets owned by students:\nEach circle = 2 pets\nAmy = 5 circles, Ben = 7 circles, Chris = 3 circles, Daisy = 6 circles\nAnswer:\n(a) How many pets does Ben have?\n(b) How many more pets does Daisy have than Amy?\n(c) How many pets do they have in total?", answer: "(a) Ben: 7 x 2 = 14 pets\n(b) Daisy: 12, Amy: 10, difference = 2 more pets\n(c) Amy: 10 + Ben: 14 + Chris: 6 + Daisy: 12 = 42 pets total" },
+            // Q55 (Essay)
+            { type: "essay", unit: "Unit 11: Volume", q: "Multi-Step Volume Problem.\nA water tank contains 85 litres of water. Fam uses 23 litres. Then, another 38 litres is poured into the tank.\n(a) How much water is in the tank now?\n(b) If Fam uses another 17 litres, how much water is left?\nShow your working for each step.", answer: "(a) 85 - 23 = 62 litres\n62 + 38 = 100 litres\n(b) 100 - 17 = 83 litres\nFinal answer: 83 litres" }
+        ]
+    };
+
     let state = {
         score: 0,
         currentQ: 0,
@@ -84,26 +216,14 @@
         answered: new Set()
     };
     
-    async function loadQuizData() {
-        try {
-            const response = await fetch('quiz_data.json');
-            quizData = await response.json();
-            renderQuestion();
-        } catch (error) {
-            console.error('Failed to load quiz data:', error);
-            document.getElementById('quiz-container').innerHTML = '<p style="color:white;text-align:center;">Error loading quiz data. Please refresh.</p>';
-        }
-    }
-    
     function getPointsForType(type) {
         if (type === 'mc') return 2;
         if (type === 'fill') return 2;
-        if (type === 'essay') return 10;
+        if (type === 'essay') return 0;
         return 2;
     }
     
     function renderQuestion() {
-        if (!quizData) return;
         const q = quizData.questions[state.currentQ];
         const container = document.getElementById('quiz-container');
         const total = quizData.questions.length;
@@ -113,13 +233,16 @@
         document.getElementById('progress').style.width = progress + '%';
         
         let sectionClass = q.type === 'mc' ? 'section-mc' : q.type === 'fill' ? 'section-fill' : 'section-essay';
-        let sectionLabel = q.type === 'mc' ? '🎯 Multiple Choice' : q.type === 'fill' ? '📝 Fill in the Blank' : '✍️ Essay';
+        let sectionLabel = q.type === 'mc' ? 'Multiple Choice' : q.type === 'fill' ? 'Fill in the Blank' : 'Essay';
         let points = getPointsForType(q.type);
         
-        let html = `<div class="card">
-            <span class="section-label ${sectionClass}">${sectionLabel} (${points} pts)</span>
-            ${q.unit ? `<span class="unit-label">📚 ${q.unit}</span>` : ''}
-            <div class="question">${q.q}</div>`;
+        let html = `<div class="card">`;
+        if (q.image) {
+            html += `<img src="${q.image}" alt="Question image" class="q-image">`;
+        }
+        html += `<span class="section-label ${sectionClass}">${sectionLabel} (${points} pts)</span>`;
+        if (q.unit) html += `<span class="unit-label">${q.unit}</span>`;
+        html += `<div class="question">${q.q}</div>`;
         
         if (q.type === 'mc') {
             html += `<div class="options">`;
@@ -127,24 +250,23 @@
             q.options.forEach((opt, i) => {
                 html += `<div class="option" onclick="selectMC(this, ${i})">${letters[i]}. ${opt}</div>`;
             });
-            html += `</div><button class="next-btn" id="nextBtn" onclick="nextQ()" disabled>Next ➡️</button>`;
+            html += `</div><button class="next-btn" id="nextBtn" onclick="nextQ()" disabled>Next</button>`;
         } else if (q.type === 'fill') {
             html += `<div class="fill-blank"><input type="text" id="fillInput" placeholder="Type your answer..." onkeypress="if(event.key==='Enter')checkFill()"></div>`;
-            html += `<button class="next-btn" onclick="checkFill()">Check ✅</button>`;
+            html += `<button class="next-btn" onclick="checkFill()">Check</button>`;
         } else if (q.type === 'essay') {
             html += `<div class="essay"><textarea id="essayInput" placeholder="Write your answer here..."></textarea></div>`;
-            html += `<button class="next-btn" onclick="nextQ()">Next ➡️</button>`;
+            html += `<button class="next-btn" onclick="nextQ()">Next</button>`;
         }
         
         html += `</div>`;
         container.innerHTML = html;
         
-        // Show submit button on last question
         if (state.currentQ === total - 1) {
             const card = container.querySelector('.card');
             const submitBtn = document.createElement('button');
             submitBtn.className = 'submit-quiz-btn';
-            submitBtn.textContent = '📊 Submit Quiz';
+            submitBtn.textContent = 'Submit Quiz';
             submitBtn.onclick = showResults;
             card.appendChild(submitBtn);
         }
@@ -178,25 +300,36 @@
         state.answered.add(state.currentQ);
         input.disabled = true;
         
+        const card = input.parentElement.parentElement;
+        
         if (userAns === correct) {
             state.score += 2;
             document.getElementById('score').textContent = state.score;
             input.style.borderColor = '#4caf50';
             createConfetti();
+            const feedback = document.createElement('div');
+            feedback.className = 'correct-feedback';
+            feedback.textContent = 'Correct! Well done!';
+            card.appendChild(feedback);
         } else {
             input.style.borderColor = '#f44336';
+            const feedback = document.createElement('div');
+            feedback.className = 'wrong-feedback';
+            feedback.textContent = 'Incorrect. The correct answer is: ' + q.answer;
+            card.appendChild(feedback);
         }
-        
-        const card = input.parentElement.parentElement;
-        const correctDiv = document.createElement('div');
-        correctDiv.style.cssText = 'margin-top:10px;padding:10px;background:#e8f5e9;border-radius:10px;color:#2e7d32';
-        correctDiv.textContent = 'Correct answer: ' + q.answer;
-        card.appendChild(correctDiv);
         
         setTimeout(nextQ, 2000);
     }
     
     function nextQ() {
+        if (quizData.questions[state.currentQ].type === 'essay') {
+            const essayInput = document.getElementById('essayInput');
+            if (essayInput) {
+                state.answers[state.currentQ] = essayInput.value;
+            }
+        }
+        
         state.currentQ++;
         if (state.currentQ < quizData.questions.length) {
             renderQuestion();
@@ -226,64 +359,58 @@
         const percentage = Math.round((state.score / 100) * 100);
         const passed = percentage >= quizData.passingScore;
         
-        let html = `<div id="results"><h2>${passed ? '🎊 CONGRATULATIONS!' : '📚 Good Try!'}</h2>`;
+        let html = `<div id="results"><h2>${passed ? 'CONGRATULATIONS!' : 'Good Try!'}</h2>`;
         html += `<div class="final-score">${state.score}/100 (${percentage}%)</div>`;
-        html += `<div class="pass-status ${passed ? 'pass' : 'fail'}">${passed ? '✅ PASSED! (≥70%)' : '❌ Not quite (≥70% to pass)'}</div>`;
-        html += '<button class="btn" onclick="showReview()">📖 Review Answers</button>';
-        html += '<button class="btn" style="margin-left:10px" onclick="restartQuiz()">🔄 Try Again</button>';
+        html += `<div class="pass-status ${passed ? 'pass' : 'fail'}">${passed ? 'PASSED! (85% to pass)' : 'Not quite (85% to pass)'}</div>`;
+        html += '<button class="btn" onclick="showReview()">Review Answers</button>';
+        html += '<button class="btn" style="margin-left:10px" onclick="restartQuiz()">Try Again</button>';
         
         html += '<div id="review-section" class="hidden" style="margin-top:40px;text-align:left">';
-        html += '<h3 style="color:white;margin-bottom:20px">📝 Full Review</h3>';
+        html += '<div class="review-container"><h3 style="color:white;margin-bottom:20px">Full Review</h3>';
         
-        // MC Section
-        const mcQuestions = quizData.questions.filter(q => q.type === 'mc');
-        const fillQuestions = quizData.questions.filter(q => q.type === 'fill');
-        const essayQuestions = quizData.questions.filter(q => q.type === 'essay');
-        
-        let mcIndex = 0;
-        let fillIndex = 0;
-        let essayIndex = 0;
-        
-        html += '<div style="background:white;border-radius:15px;padding:20px;margin:15px 0"><h4 style="color:#1565c0">🎯 Multiple Choice (30 questions, 2pts each)</h4>';
+        html += '<div style="background:white;border-radius:15px;padding:20px;margin:15px 0"><h4 style="color:#1565c0">Multiple Choice (30 questions, 2pts each = 60pts)</h4>';
+        let mcNum = 0;
         quizData.questions.forEach((q, i) => {
             if (q.type !== 'mc') return;
+            mcNum++;
             const isCorrect = state.answers[i] === q.answer;
             html += `<div class="review-item ${isCorrect ? 'correct-review' : 'wrong-review'}">
-                <h4>${i + 1}. ${q.q.substring(0, 80)}${q.q.length > 80 ? '...' : ''}</h4>
+                <h4>Q${mcNum}. ${q.q.substring(0, 100)}${q.q.length > 100 ? '...' : ''}</h4>
                 <div class="user-answer">Your answer: ${q.options[state.answers[i]] || 'Not answered'}</div>
                 <div class="correct-answer">Correct: ${q.options[q.answer]}</div>
             </div>`;
-            mcIndex++;
         });
         html += '</div>';
         
-        html += '<div style="background:white;border-radius:15px;padding:20px;margin:15px 0"><h4 style="color:#e65100">📝 Fill in the Blank (20 questions, 2pts each)</h4>';
+        html += '<div style="background:white;border-radius:15px;padding:20px;margin:15px 0"><h4 style="color:#e65100">Fill in the Blank (20 questions, 2pts each = 40pts)</h4>';
+        let fillNum = 0;
         quizData.questions.forEach((q, i) => {
             if (q.type !== 'fill') return;
+            fillNum++;
             const userAns = state.answers[i] || 'Not answered';
             const isCorrect = (userAns.toString().toLowerCase().trim() === q.answer.toLowerCase().trim());
             html += `<div class="review-item ${isCorrect ? 'correct-review' : 'wrong-review'}">
-                <h4>${i + 1}. ${q.q.substring(0, 80)}${q.q.length > 80 ? '...' : ''}</h4>
+                <h4>Q${fillNum}. ${q.q.substring(0, 100)}${q.q.length > 100 ? '...' : ''}</h4>
                 <div class="user-answer">Your answer: ${userAns}</div>
                 <div class="correct-answer">Correct: ${q.answer}</div>
             </div>`;
-            fillIndex++;
         });
         html += '</div>';
         
-        html += '<div style="background:white;border-radius:15px;padding:20px;margin:15px 0"><h4 style="color:#7b1fa2">✍️ Essay (5 questions, 10pts each)</h4>';
+        html += '<div style="background:white;border-radius:15px;padding:20px;margin:15px 0"><h4 style="color:#7b1fa2">Essay (5 questions - Submit for Review)</h4>';
+        let essayNum = 0;
         quizData.questions.forEach((q, i) => {
             if (q.type !== 'essay') return;
+            essayNum++;
             html += `<div class="review-item">
-                <h4>${i + 1}. ${q.q.substring(0, 80)}${q.q.length > 80 ? '...' : ''}</h4>
+                <h4>Essay ${essayNum}. ${q.q.substring(0, 100)}${q.q.length > 100 ? '...' : ''}</h4>
                 <div class="user-answer">Your answer:<br>${state.answers[i] || 'Not answered'}</div>
-                <div class="correct-answer">Note: Essay answers are not auto-graded. Please review manually.</div>
+                <div class="correct-answer">Model Answer: ${q.answer}</div>
             </div>`;
-            essayIndex++;
         });
         html += '</div>';
         
-        html += '</div></div>';
+        html += '</div></div></div>';
         
         document.getElementById('results').innerHTML = html;
         document.getElementById('results').classList.remove('hidden');
@@ -306,8 +433,7 @@
         renderQuestion();
     }
     
-    // Initialize quiz
-    loadQuizData();
+    renderQuestion();
     </script>
 </body>
 </html>
