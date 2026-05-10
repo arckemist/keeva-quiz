@@ -67,7 +67,7 @@ function renderQuestion() {
   document.getElementById('progress-text').textContent =
     fmt.replace('{n}', dispN).replace('{total}', total);
 
-  document.getElementById('question-text').textContent = q.text;
+  document.getElementById('question-text').innerHTML = q.text;
 
   const imgEl = document.getElementById('question-image');
   if (q.image) { imgEl.src = q.image; imgEl.style.display = 'block'; }
