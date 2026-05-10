@@ -1,70 +1,640 @@
 {
-  "student": "Keeva",
-  "grade": "P2",
-  "subject": "Celebrations & Holidays",
-  "topic": "Celebrations Around the World",
-  "source": "OCR Content - 22 April 2026",
-  "date": "2026-04-22",
-  "totalQuestions": 55,
-  "passingScore": 70,
-  "passingPoints": 70,
+  "metadata": {
+    "subject": "English Language",
+    "grade": "2",
+    "source_pdf": "combined.pdf",
+    "generated_at": "2026-05-10"
+  },
+  "ui_strings": {
+    "start_button": "Start Quiz",
+    "submit_button": "Submit",
+    "fill_placeholder": "Type your answer...",
+    "essay_placeholder": "Write your answer here...",
+    "loading": "Loading quiz...",
+    "error_load_failed": "Failed to load quiz. Please refresh the page.",
+    "progress_format": "Question {n} of {total}"
+  },
+  "title": "10 May 2026",
   "questions": [
-    {"type": "mc", "q": "When is New Year's Day celebrated in Indonesia?", "options": ["1 January", "17 August", "1 May", "25 December"], "answer": 0, "unit": "Indonesian Historical Holidays"},
-    {"type": "mc", "q": "Indonesia's Independence Day is celebrated on:", "options": ["10 November", "28 October", "17 August", "1 January"], "answer": 2, "unit": "Indonesian Historical Holidays"},
-    {"type": "mc", "q": "Heroes Day (Hari Pahlawan) in Indonesia is on:", "options": ["10 November", "17 August", "28 October", "20 May"], "answer": 0, "unit": "Indonesian Historical Holidays"},
-    {"type": "mc", "q": "The Youth Pledge (Sumpah Pemuda) is commemorated on:", "options": ["28 October", "17 August", "10 November", "1 January"], "answer": 0, "unit": "Indonesian Historical Holidays"},
-    {"type": "mc", "q": "What is the HinduBalinese celebration called?", "options": ["Ramadan", "Galungan", "Easter", "Lunar New Year"], "answer": 1, "unit": "Indonesian Religious Holidays"},
-    {"type": "mc", "q": "When does Galungan usually occur in the Balinese calendar?", "options": ["Every 210 days", "Once a year", "Every month", "Every 5 years"], "answer": 0, "unit": "Indonesian Religious Holidays"},
-    {"type": "mc", "q": "Kuningan comes _____ after Galungan.", "options": ["10 days", "20 days", "30 days", "5 days"], "answer": 0, "unit": "Indonesian Religious Holidays"},
-    {"type": "mc", "q": "Hina Matsuri is also known as:", "options": ["Doll Festival", "Flower Festival", "Star Festival", "Moon Festival"], "answer": 0, "unit": "World Celebrations"},
-    {"type": "mc", "q": "Hina Matsuri is celebrated on:", "options": ["3 March", "1 January", "17 August", "25 December"], "answer": 0, "unit": "World Celebrations"},
-    {"type": "mc", "q": "Chinese New Year is also called:", "options": ["Lunar New Year", "Solar New Year", "Western New Year", "Independence Day"], "answer": 0, "unit": "World Celebrations"},
-    {"type": "mc", "q": "May Day is celebrated on:", "options": ["1 May", "1 January", "17 August", "28 October"], "answer": 0, "unit": "World Celebrations"},
-    {"type": "mc", "q": "Which country celebrates Hina Matsuri?", "options": ["Japan", "Indonesia", "China", "India"], "answer": 0, "unit": "World Celebrations"},
-    {"type": "mc", "q": "What do Hindu Balinese people celebrate?", "options": ["Galungan", "Chinese New Year", "May Day", "Independence Day"], "answer": 0, "unit": "Indonesian Religious Holidays"},
-    {"type": "mc", "q": "Vijay's ancestors came from which country?", "options": ["India", "China", "Indonesia", "Japan"], "answer": 0, "unit": "Vijay's Story"},
-    {"type": "mc", "q": "Vijay's family migrated to find better:", "options": ["Opportunities", "Beaches", "Food", "Weather"], "answer": 0, "unit": "Vijay's Story"},
-    {"type": "mc", "q": "What is celebrated on 17 August in Indonesia?", "options": ["Independence Day", "New Year's Day", "Heroes Day", "Youth Day"], "answer": 0, "unit": "Indonesian Historical Holidays"},
-    {"type": "mc", "q": "How many public holidays does Indonesia have?", "options": ["More than 10", "Only 1", "Exactly 5", "None"], "answer": 0, "unit": "Indonesian Historical Holidays"},
-    {"type": "mc", "q": "The Youth Pledge was declared in:", "options": ["1928", "1945", "1950", "1910"], "answer": 0, "unit": "Indonesian Historical Holidays"},
-    {"type": "mc", "q": "During Galungan, Balinese people pray at:", "options": ["Temple", "Church", "Mosque", "Park"], "answer": 0, "unit": "Indonesian Religious Holidays"},
-    {"type": "mc", "q": "Which celebration uses dolls or figurines?", "options": ["Hina Matsuri", "Galungan", "Independence Day", "May Day"], "answer": 0, "unit": "World Celebrations"},
-    {"type": "mc", "q": "May Day is a holiday for:", "options": ["Workers", "Children", "Teachers", "Doctors"], "answer": 0, "unit": "World Celebrations"},
-    {"type": "mc", "q": "Chinese New Year is based on which calendar?", "options": ["Lunar", "Solar", "Gregorian", "Julian"], "answer": 0, "unit": "World Celebrations"},
-    {"type": "mc", "q": "Heroes Day honors Indonesian:", "options": ["National heroes", "Foreign leaders", "Children", "Animals"], "answer": 0, "unit": "Indonesian Historical Holidays"},
-    {"type": "mc", "q": "The Sumpah Pemuda was about Indonesian:", "options": ["Youth unity", "Independence", "Education", "Religion"], "answer": 0, "unit": "Indonesian Historical Holidays"},
-    {"type": "mc", "q": "What symbolizes the end of Galungan celebrations?", "answer": 0, "unit": "Indonesian Religious Holidays"},
-    {"type": "mc", "q": "Hina Matsuri is especially important for:", "options": ["Girls and families", "Boys only", "Elderly", "Soldiers"], "answer": 0, "unit": "World Celebrations"},
-    {"type": "mc", "q": "Vijay's family left their home country to:", "options": ["Seek better opportunities", "Visit relatives", "Go on vacation", "Study"], "answer": 0, "unit": "Vijay's Story"},
-    {"type": "mc", "q": "Galungan celebrates the victory of:", "options": ["Good over evil", "War over peace", "Rich over poor", "Young over old"], "answer": 0, "unit": "Indonesian Religious Holidays"},
-    {"type": "mc", "q": "Which holiday is on 28 October?", "options": ["Youth Pledge Day", "Independence Day", "New Year", "Labor Day"], "answer": 0, "unit": "Indonesian Historical Holidays"},
-    {"type": "mc", "q": "During Kuningan, Balinese people offer:", "options": ["Prayers and offerings", "Money to government", "Food to animals", "Books to library"], "answer": 0, "unit": "Indonesian Religious Holidays"},
-
-    {"type": "fill", "q": "New Year's Day is celebrated on _____ January.", "answer": "1", "unit": "Indonesian Historical Holidays"},
-    {"type": "fill", "q": "Indonesia celebrates its Independence Day on _____ August.", "answer": "17", "unit": "Indonesian Historical Holidays"},
-    {"type": "fill", "q": "Heroes Day is on _____ November.", "answer": "10", "unit": "Indonesian Historical Holidays"},
-    {"type": "fill", "q": "The Youth Pledge (Sumpah Pemuda) is on _____ October.", "answer": "28", "unit": "Indonesian Historical Holidays"},
-    {"type": "fill", "q": "Hina Matsuri is celebrated on _____ March.", "answer": "3", "unit": "World Celebrations"},
-    {"type": "fill", "q": "May Day is on _____ May.", "answer": "1", "unit": "World Celebrations"},
-    {"type": "fill", "q": "The Hindu Balinese celebration is called _____.", "answer": "Galungan", "unit": "Indonesian Religious Holidays"},
-    {"type": "fill", "q": "Kuningan comes 10 days _____ Galungan.", "answer": "after", "unit": "Indonesian Religious Holidays"},
-    {"type": "fill", "q": "Hina Matsuri is also known as the Doll _____ .", "answer": "Festival", "unit": "World Celebrations"},
-    {"type": "fill", "q": "Chinese New Year is also called _____ New Year.", "answer": "Lunar", "unit": "World Celebrations"},
-    {"type": "fill", "q": "Vijay's ancestors came from _____ .", "answer": "India", "unit": "Vijay's Story"},
-    {"type": "fill", "q": "Indonesia has more than _____ public holidays.", "answer": "10", "unit": "Indonesian Historical Holidays"},
-    {"type": "fill", "q": "The Youth Pledge was declared in _____ .", "answer": "1928", "unit": "Indonesian Historical Holidays"},
-    {"type": "fill", "q": "Balinese people pray at the _____ during Galungan.", "answer": "temple", "unit": "Indonesian Religious Holidays"},
-    {"type": "fill", "q": "Hina Matsuri is celebrated in _____ .", "answer": "Japan", "unit": "World Celebrations"},
-    {"type": "fill", "q": "May Day honors _____ .", "answer": "workers", "unit": "World Celebrations"},
-    {"type": "fill", "q": "Indonesia gained independence in _____ .", "answer": "1945", "unit": "Indonesian Historical Holidays"},
-    {"type": "fill", "q": "The festival celebrating good over evil is called _____.", "answer": "Galungan", "unit": "Indonesian Religious Holidays"},
-    {"type": "fill", "q": "Vijay's family migrated to find better _____.", "answer": "opportunities", "unit": "Vijay's Story"},
-    {"type": "fill", "q": "Galungan happens every _____ days in the Balinese calendar.", "answer": "210", "unit": "Indonesian Religious Holidays"},
-
-    {"type": "essay", "q": "Why do you think it's important to celebrate national holidays like Independence Day and Heroes Day? Write at least 3 sentences.", "answer": "", "unit": "Indonesian Historical Holidays"},
-    {"type": "essay", "q": "Compare Hina Matsuri (Japan) and Galungan (Bali, Indonesia). How are they similar and different? Write at least 4 sentences.", "answer": "", "unit": "World Celebrations"},
-    {"type": "essay", "q": "Why do people migrate to different countries? Using Vijay's family as an example, explain why his ancestors moved. Write at least 3 sentences.", "answer": "", "unit": "Vijay's Story"},
-    {"type": "essay", "q": "Think about a celebration you enjoy with your family. Describe what you do, why it is special, and how it makes you feel. Write at least 4 sentences.", "answer": "", "unit": "Personal Reflection"},
-    {"type": "essay", "q": "Indonesian public holidays include Independence Day (17 August), Heroes Day (10 November), and Youth Pledge Day (28 October). Why do you think we need so many holidays to remember our history? Write at least 3 sentences.", "answer": "", "unit": "Indonesian Historical Holidays"}
+    {
+      "id": 1,
+      "type": "mc",
+      "text": "What does <strong>Pronounced</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Something that is remarkable is different or surprising.",
+        "B": "A sheltered place protects from wind and rain.",
+        "C": "The way a word is pronounced is the way it should be said out loud.",
+        "D": "Routines are steps you follow in the same way each time you do a task."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 2,
+      "type": "mc",
+      "text": "What does <strong>Wildlife</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Routines are steps you follow in the same way each time you do a task.",
+        "B": "If you offered something to someone, you asked to give it to him or her.",
+        "C": "Something that is remarkable is different or surprising.",
+        "D": "Wildlife is animals that live in open land and not with people."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 3,
+      "type": "mc",
+      "text": "What does <strong>Permanent</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "If you stoked a fire, you stirred it to keep it burning.",
+        "B": "Wit is a talent for using words to be funny.",
+        "C": "Something that is permanent lasts forever.",
+        "D": "The way a word is pronounced is the way it should be said out loud."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "text": "What does <strong>Romped</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "If something wraps around another thing, it winds or goes around that thing.",
+        "B": "Things that are separate are not together.",
+        "C": "The way a word is pronounced is the way it should be said out loud.",
+        "D": "If something romped, it ran and jumped in a happy way."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 5,
+      "type": "mc",
+      "text": "What does <strong>Prepare</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "If you stoked a fire, you stirred it to keep it burning.",
+        "B": "If you prepare something, you get it ready.",
+        "C": "Crack means to break or split.",
+        "D": "The surface of something is the top or outside of it."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 6,
+      "type": "mc",
+      "text": "What does <strong>Mingles</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "When something mingles with another thing, the two things mix together.",
+        "B": "If you are joking, you are saying something to be funny.",
+        "C": "Something that is permanent lasts forever.",
+        "D": "A hide is an animal's skin."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 7,
+      "type": "mc",
+      "text": "What does <strong>Separate</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Something that is permanent lasts forever.",
+        "B": "If something wraps around another thing, it winds or goes around that thing.",
+        "C": "Things that are separate are not together.",
+        "D": "A sheltered place protects from wind and rain."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 8,
+      "type": "mc",
+      "text": "What does <strong>Surface</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "If you shrugged, you lifted and lowered your shoulders to show you did not know.",
+        "B": "If you tucked something, you pushed it behind or into something else.",
+        "C": "The surface of something is the top or outside of it.",
+        "D": "Fudge is soft candy made from sugar, butter, and milk or cream."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 9,
+      "type": "mc",
+      "text": "What does <strong>Wraps</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Someone who is stubborn does not want to change.",
+        "B": "If you are joking, you are saying something to be funny.",
+        "C": "Crack means to break or split.",
+        "D": "If something wraps around another thing, it winds or goes around that thing."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "text": "What does <strong>Attached</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Something that is permanent lasts forever.",
+        "B": "If something romped, it ran and jumped in a happy way.",
+        "C": "When things are attached, they are joined together.",
+        "D": "A sheltered place protects from wind and rain."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 11,
+      "type": "mc",
+      "text": "What does <strong>Crack</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "The way a word is pronounced is the way it should be said out loud.",
+        "B": "If you are joking, you are saying something to be funny.",
+        "C": "If something wraps around another thing, it winds or goes around that thing.",
+        "D": "Crack means to break or split."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 12,
+      "type": "mc",
+      "text": "What does <strong>Sheltered</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "If you offered something to someone, you asked to give it to him or her.",
+        "B": "A sheltered place protects from wind and rain.",
+        "C": "If you shrugged, you lifted and lowered your shoulders to show you did not know.",
+        "D": "If something romped, it ran and jumped in a happy way."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 13,
+      "type": "mc",
+      "text": "What does <strong>Weary</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "If you shrugged, you lifted and lowered your shoulders to show you did not know.",
+        "B": "Someone who is weary is very tired.",
+        "C": "Fudge is soft candy made from sugar, butter, and milk or cream.",
+        "D": "If something growled, it made a deep, angry sound."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 14,
+      "type": "mc",
+      "text": "What does <strong>Hide</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "The way a word is pronounced is the way it should be said out loud.",
+        "B": "A hide is an animal's skin.",
+        "C": "If you are joking, you are saying something to be funny.",
+        "D": "If something growled, it made a deep, angry sound."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 15,
+      "type": "mc",
+      "text": "What does <strong>Wit</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Someone who is grumpy is in a bad mood.",
+        "B": "A hide is an animal's skin.",
+        "C": "Fudge is soft candy made from sugar, butter, and milk or cream.",
+        "D": "Wit is a talent for using words to be funny."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 16,
+      "type": "mc",
+      "text": "What does <strong>Routines</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Fudge is soft candy made from sugar, butter, and milk or cream.",
+        "B": "Wit is a talent for using words to be funny.",
+        "C": "If something growled, it made a deep, angry sound.",
+        "D": "Routines are steps you follow in the same way each time you do a task."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 17,
+      "type": "mc",
+      "text": "What does <strong>Stoked</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "When you arrive, you get to a place.",
+        "B": "If you stoked a fire, you stirred it to keep it burning.",
+        "C": "Routines are steps you follow in the same way each time you do a task.",
+        "D": "A sheltered place protects from wind and rain."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 18,
+      "type": "mc",
+      "text": "What does <strong>Boisterous</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Something that is boisterous is wild or noisy.",
+        "B": "Someone who is stubborn does not want to change.",
+        "C": "Wildlife is animals that live in open land and not with people.",
+        "D": "A sheltered place protects from wind and rain."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 19,
+      "type": "mc",
+      "text": "What does <strong>Surrounding</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Something that is surrounding a place is all around it.",
+        "B": "If something growled, it made a deep, angry sound.",
+        "C": "Something that is boisterous is wild or noisy.",
+        "D": "Someone who is stubborn does not want to change."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 20,
+      "type": "mc",
+      "text": "What does <strong>Remarkable</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Something that is remarkable is different or surprising.",
+        "B": "A sheltered place protects from wind and rain.",
+        "C": "Thickets are groups of bushes or small trees.",
+        "D": "The way a word is pronounced is the way it should be said out loud."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 21,
+      "type": "mc",
+      "text": "What does <strong>Thickets</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Thickets are groups of bushes or small trees.",
+        "B": "When something mingles with another thing, the two things mix together.",
+        "C": "Something that is boisterous is wild or noisy.",
+        "D": "Wit is a talent for using words to be funny."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 22,
+      "type": "mc",
+      "text": "What does <strong>Arrive</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Thickets are groups of bushes or small trees.",
+        "B": "When you arrive, you get to a place.",
+        "C": "Crack means to break or split.",
+        "D": "If something wraps around another thing, it winds or goes around that thing."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 23,
+      "type": "mc",
+      "text": "What does <strong>Grumpy</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Fudge is soft candy made from sugar, butter, and milk or cream.",
+        "B": "Someone who is grumpy is in a bad mood.",
+        "C": "If you prepare something, you get it ready.",
+        "D": "If something wraps around another thing, it winds or goes around that thing."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 24,
+      "type": "mc",
+      "text": "What does <strong>Joking</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Wildlife is animals that live in open land and not with people.",
+        "B": "Something that is remarkable is different or surprising.",
+        "C": "Routines are steps you follow in the same way each time you do a task.",
+        "D": "If you are joking, you are saying something to be funny."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 25,
+      "type": "mc",
+      "text": "What does <strong>Tucked</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "The way a word is pronounced is the way it should be said out loud.",
+        "B": "If you tucked something, you pushed it behind or into something else.",
+        "C": "Something that is permanent lasts forever.",
+        "D": "Crack means to break or split."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 26,
+      "type": "mc",
+      "text": "What does <strong>Stubborn</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Someone who is stubborn does not want to change.",
+        "B": "Wildlife is animals that live in open land and not with people.",
+        "C": "If you prepare something, you get it ready.",
+        "D": "Someone who is weary is very tired."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 27,
+      "type": "mc",
+      "text": "What does <strong>Growled</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Things that are separate are not together.",
+        "B": "The way a word is pronounced is the way it should be said out loud.",
+        "C": "If you prepare something, you get it ready.",
+        "D": "If something growled, it made a deep, angry sound."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 28,
+      "type": "mc",
+      "text": "What does <strong>Shrugged</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "Thickets are groups of bushes or small trees.",
+        "B": "If something growled, it made a deep, angry sound.",
+        "C": "If you shrugged, you lifted and lowered your shoulders to show you did not know.",
+        "D": "If you stoked a fire, you stirred it to keep it burning."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 29,
+      "type": "mc",
+      "text": "What does <strong>Offered</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "If you tucked something, you pushed it behind or into something else.",
+        "B": "The way a word is pronounced is the way it should be said out loud.",
+        "C": "Someone who is grumpy is in a bad mood.",
+        "D": "If you offered something to someone, you asked to give it to him or her."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 30,
+      "type": "mc",
+      "text": "What does <strong>Fudge</strong> mean?",
+      "image": null,
+      "options": {
+        "A": "If you stoked a fire, you stirred it to keep it burning.",
+        "B": "Fudge is soft candy made from sugar, butter, and milk or cream.",
+        "C": "Someone who is grumpy is in a bad mood.",
+        "D": "Things that are separate are not together."
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 31,
+      "type": "fill",
+      "text": "'Pronounced' means the way a word is pronounced is the way it should be said out loud.",
+      "image": null,
+      "answer": "Pronounced",
+      "points": 2
+    },
+    {
+      "id": 32,
+      "type": "fill",
+      "text": "'Wildlife' means wildlife is animals that live in open land and not with people.",
+      "image": null,
+      "answer": "Wildlife",
+      "points": 2
+    },
+    {
+      "id": 33,
+      "type": "fill",
+      "text": "'Permanent' means something that is permanent lasts forever.",
+      "image": null,
+      "answer": "Permanent",
+      "points": 2
+    },
+    {
+      "id": 34,
+      "type": "fill",
+      "text": "'Romped' means if something romped, it ran and jumped in a happy way.",
+      "image": null,
+      "answer": "Romped",
+      "points": 2
+    },
+    {
+      "id": 35,
+      "type": "fill",
+      "text": "'Prepare' means if you prepare something, you get it ready.",
+      "image": null,
+      "answer": "Prepare",
+      "points": 2
+    },
+    {
+      "id": 36,
+      "type": "fill",
+      "text": "'Mingles' means when something mingles with another thing, the two things mix together.",
+      "image": null,
+      "answer": "Mingles",
+      "points": 2
+    },
+    {
+      "id": 37,
+      "type": "fill",
+      "text": "'Separate' means things that are separate are not together.",
+      "image": null,
+      "answer": "Separate",
+      "points": 2
+    },
+    {
+      "id": 38,
+      "type": "fill",
+      "text": "'Surface' means the surface of something is the top or outside of it.",
+      "image": null,
+      "answer": "Surface",
+      "points": 2
+    },
+    {
+      "id": 39,
+      "type": "fill",
+      "text": "'Wraps' means if something wraps around another thing, it winds or goes around that thing.",
+      "image": null,
+      "answer": "Wraps",
+      "points": 2
+    },
+    {
+      "id": 40,
+      "type": "fill",
+      "text": "'Attached' means when things are attached, they are joined together.",
+      "image": null,
+      "answer": "Attached",
+      "points": 2
+    },
+    {
+      "id": 41,
+      "type": "fill",
+      "text": "'Crack' means crack means to break or split.",
+      "image": null,
+      "answer": "Crack",
+      "points": 2
+    },
+    {
+      "id": 42,
+      "type": "fill",
+      "text": "'Sheltered' means a sheltered place protects from wind and rain.",
+      "image": null,
+      "answer": "Sheltered",
+      "points": 2
+    },
+    {
+      "id": 43,
+      "type": "fill",
+      "text": "'Weary' means someone who is weary is very tired.",
+      "image": null,
+      "answer": "Weary",
+      "points": 2
+    },
+    {
+      "id": 44,
+      "type": "fill",
+      "text": "'Hide' means a hide is an animal's skin.",
+      "image": null,
+      "answer": "Hide",
+      "points": 2
+    },
+    {
+      "id": 45,
+      "type": "fill",
+      "text": "'Wit' means wit is a talent for using words to be funny.",
+      "image": null,
+      "answer": "Wit",
+      "points": 2
+    },
+    {
+      "id": 46,
+      "type": "fill",
+      "text": "'Routines' means routines are steps you follow in the same way each time you do a task.",
+      "image": null,
+      "answer": "Routines",
+      "points": 2
+    },
+    {
+      "id": 47,
+      "type": "fill",
+      "text": "'Stoked' means if you stoked a fire, you stirred it to keep it burning.",
+      "image": null,
+      "answer": "Stoked",
+      "points": 2
+    },
+    {
+      "id": 48,
+      "type": "fill",
+      "text": "'Boisterous' means something that is boisterous is wild or noisy.",
+      "image": null,
+      "answer": "Boisterous",
+      "points": 2
+    },
+    {
+      "id": 49,
+      "type": "fill",
+      "text": "'Surrounding' means something that is surrounding a place is all around it.",
+      "image": null,
+      "answer": "Surrounding",
+      "points": 2
+    },
+    {
+      "id": 50,
+      "type": "fill",
+      "text": "'Remarkable' means something that is remarkable is different or surprising.",
+      "image": null,
+      "answer": "Remarkable",
+      "points": 2
+    },
+    {
+      "id": 51,
+      "type": "essay",
+      "text": "Use the word 'pronounced' in a sentence.",
+      "image": null,
+      "answer": "Model answer: The word 'Pronounced' means [student writes their own meaning].",
+      "points": 0
+    },
+    {
+      "id": 52,
+      "type": "essay",
+      "text": "Use the word 'sheltered' in a sentence.",
+      "image": null,
+      "answer": "Model answer: The word 'Sheltered' means [student writes their own meaning].",
+      "points": 0
+    },
+    {
+      "id": 53,
+      "type": "essay",
+      "text": "Use the word 'stubborn' in a sentence.",
+      "image": null,
+      "answer": "Model answer: The word 'Stubborn' means [student writes their own meaning].",
+      "points": 0
+    },
+    {
+      "id": 54,
+      "type": "essay",
+      "text": "Use the word 'remarkable' in a sentence.",
+      "image": null,
+      "answer": "Model answer: The word 'Remarkable' means [student writes their own meaning].",
+      "points": 0
+    },
+    {
+      "id": 55,
+      "type": "essay",
+      "text": "Use the word 'mingles' in a sentence.",
+      "image": null,
+      "answer": "Model answer: The word 'Mingles' means [student writes their own meaning].",
+      "points": 0
+    }
   ]
 }
