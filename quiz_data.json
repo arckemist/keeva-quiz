@@ -1,0 +1,640 @@
+{
+  "metadata": {
+    "subject": "Mathematics",
+    "grade": "2",
+    "source_pdf": "keev-math.pdf",
+    "generated_at": "2026-05-18"
+  },
+  "ui_strings": {
+    "start_button": "Start Quiz",
+    "submit_button": "Submit",
+    "fill_placeholder": "Type your answer...",
+    "essay_placeholder": "Write your answer here...",
+    "loading": "Loading quiz...",
+    "error_load_failed": "Failed to load quiz. Please refresh the page.",
+    "progress_format": "Question {n} of {total}"
+  },
+  "title": "18 May 2026",
+  "questions": [
+    {
+      "id": 1,
+      "type": "mc",
+      "text": "A cube has how many flat faces?",
+      "image": null,
+      "options": {
+        "A": "6",
+        "B": "4",
+        "C": "8",
+        "D": "12"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 2,
+      "type": "mc",
+      "text": "A cube has how many vertices?",
+      "image": null,
+      "options": {
+        "A": "8",
+        "B": "6",
+        "C": "8",
+        "D": "12"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 3,
+      "type": "mc",
+      "text": "A cube has how many edges?",
+      "image": null,
+      "options": {
+        "A": "12",
+        "B": "6",
+        "C": "8",
+        "D": "12"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "text": "A cuboid has how many flat faces?",
+      "image": null,
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 5,
+      "type": "mc",
+      "text": "A cuboid has how many vertices?",
+      "image": null,
+      "options": {
+        "A": "12",
+        "B": "8",
+        "C": "6",
+        "D": "8"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 6,
+      "type": "mc",
+      "text": "A cone has how many flat faces?",
+      "image": null,
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "1",
+        "D": "2"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 7,
+      "type": "mc",
+      "text": "A cylinder has how many flat faces?",
+      "image": null,
+      "options": {
+        "A": "0",
+        "B": "2",
+        "C": "2",
+        "D": "1"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 8,
+      "type": "mc",
+      "text": "A cylinder has how many edges?",
+      "image": null,
+      "options": {
+        "A": "6",
+        "B": "0",
+        "C": "0",
+        "D": "2"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 9,
+      "type": "mc",
+      "text": "A sphere has how many flat faces?",
+      "image": null,
+      "options": {
+        "A": "6",
+        "B": "2",
+        "C": "0",
+        "D": "1"
+      },
+      "answer": "C",
+      "points": 2
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "text": "Which 3D shape has no vertices at all?",
+      "image": null,
+      "options": {
+        "A": "Sphere",
+        "B": "Cuboid",
+        "C": "Cube",
+        "D": "Sphere"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 11,
+      "type": "mc",
+      "text": "What is the value of 3 five-dollar notes?",
+      "image": null,
+      "options": {
+        "A": "$20",
+        "B": "$10",
+        "C": "$15",
+        "D": "$15"
+      },
+      "answer": "C",
+      "points": 2
+    },
+    {
+      "id": 12,
+      "type": "mc",
+      "text": "What is the value of 4 ten-dollar notes?",
+      "image": null,
+      "options": {
+        "A": "$40",
+        "B": "$50",
+        "C": "$30",
+        "D": "$40"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 13,
+      "type": "mc",
+      "text": "How many cents make $1.00?",
+      "image": null,
+      "options": {
+        "A": "100",
+        "B": "50",
+        "C": "200",
+        "D": "100"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 14,
+      "type": "mc",
+      "text": "$5.35 equals how many cents?",
+      "image": null,
+      "options": {
+        "A": "5035",
+        "B": "535",
+        "C": "53",
+        "D": "535"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 15,
+      "type": "mc",
+      "text": "Henry saved $25.85 and Belle saved $32.10. Who saved more?",
+      "image": null,
+      "options": {
+        "A": "Belle",
+        "B": "Cannot be determined",
+        "C": "They saved the same",
+        "D": "Henry"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 16,
+      "type": "mc",
+      "text": "A book costs $17.25 and a bag costs $17.95. Which costs more?",
+      "image": null,
+      "options": {
+        "A": "They cost the same",
+        "B": "The bag",
+        "C": "Cannot be determined",
+        "D": "The bag"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 17,
+      "type": "mc",
+      "text": "Elsa saves $3 every week. How much does she save in 5 weeks?",
+      "image": null,
+      "options": {
+        "A": "$20",
+        "B": "$10",
+        "C": "$15",
+        "D": "$12"
+      },
+      "answer": "C",
+      "points": 2
+    },
+    {
+      "id": 18,
+      "type": "mc",
+      "text": "Kim spends $2 every day for 8 days. How much does he spend altogether?",
+      "image": null,
+      "options": {
+        "A": "$16",
+        "B": "$18",
+        "C": "$20",
+        "D": "$14"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 19,
+      "type": "mc",
+      "text": "Mrs Lee paid $60 for movie tickets at $10 each. How many tickets did she buy?",
+      "image": null,
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "6",
+        "D": "5"
+      },
+      "answer": "C",
+      "points": 2
+    },
+    {
+      "id": 20,
+      "type": "mc",
+      "text": "Rani spent $84 and Lili spent $21 less. How much did Lili spend?",
+      "image": null,
+      "options": {
+        "A": "$63",
+        "B": "$63",
+        "C": "$43",
+        "D": "$73"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 21,
+      "type": "mc",
+      "text": "A toy robot costs $109 and a toy train costs $45 more than the robot. What is the train's price?",
+      "image": null,
+      "options": {
+        "A": "$154",
+        "B": "$164",
+        "C": "$154",
+        "D": "$144"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 22,
+      "type": "mc",
+      "text": "$263 + $320 = ?",
+      "image": null,
+      "options": {
+        "A": "$583",
+        "B": "$593",
+        "C": "$603",
+        "D": "$573"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 23,
+      "type": "mc",
+      "text": "$84 - $21 = ?",
+      "image": null,
+      "options": {
+        "A": "$53",
+        "B": "$43",
+        "C": "$63",
+        "D": "$63"
+      },
+      "answer": "C",
+      "points": 2
+    },
+    {
+      "id": 24,
+      "type": "mc",
+      "text": "How many 20-cent coins make $2.00?",
+      "image": null,
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "10",
+        "D": "20"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 25,
+      "type": "mc",
+      "text": "Which shows the same amount: $0.90 or 90 cents?",
+      "image": null,
+      "options": {
+        "A": "90 cents",
+        "B": "$0.90",
+        "C": "Both are the same",
+        "D": "They are different"
+      },
+      "answer": "C",
+      "points": 2
+    },
+    {
+      "id": 26,
+      "type": "mc",
+      "text": "Aini saved $19.85 and Belle saved $32.10. Who saved the least?",
+      "image": null,
+      "options": {
+        "A": "Aini",
+        "B": "They saved the same",
+        "C": "Belle",
+        "D": "Cannot be determined"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 27,
+      "type": "mc",
+      "text": "Which amount is the largest: $5.30, $5.03, $3.50, $5.50?",
+      "image": null,
+      "options": {
+        "A": "$5.50",
+        "B": "$5.30",
+        "C": "$5.03",
+        "D": "$3.50"
+      },
+      "answer": "A",
+      "points": 2
+    },
+    {
+      "id": 28,
+      "type": "mc",
+      "text": "Which amount is the smallest: $12.50, $12.05, $12.55, $15.20?",
+      "image": null,
+      "options": {
+        "A": "$15.20",
+        "B": "$12.55",
+        "C": "$12.05",
+        "D": "$12.50"
+      },
+      "answer": "C",
+      "points": 2
+    },
+    {
+      "id": 29,
+      "type": "mc",
+      "text": "Which amount is between $20 and $30: $19.99, $25.50, $30.01, $15.00?",
+      "image": null,
+      "options": {
+        "A": "$19.99",
+        "B": "$25.50",
+        "C": "$30.01",
+        "D": "$15.00"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 30,
+      "type": "mc",
+      "text": "If you have 2 ten-dollar notes and 3 five-dollar notes, what is the total value?",
+      "image": null,
+      "options": {
+        "A": "$25",
+        "B": "$35",
+        "C": "$35",
+        "D": "$40"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 31,
+      "type": "fill",
+      "text": "A cube has _____ flat faces.",
+      "image": null,
+      "answer": "6",
+      "points": 2
+    },
+    {
+      "id": 32,
+      "type": "fill",
+      "text": "A cone has _____ flat face.",
+      "image": null,
+      "answer": "1",
+      "points": 2
+    },
+    {
+      "id": 33,
+      "type": "fill",
+      "text": "A cylinder has _____ flat faces.",
+      "image": null,
+      "answer": "2",
+      "points": 2
+    },
+    {
+      "id": 34,
+      "type": "fill",
+      "text": "$15.45 means _____ dollars and _____ cents.",
+      "image": null,
+      "answer": "15 and 45",
+      "points": 2
+    },
+    {
+      "id": 35,
+      "type": "fill",
+      "text": "$1.00 is the same as _____ cents.",
+      "image": null,
+      "answer": "100",
+      "points": 2
+    },
+    {
+      "id": 36,
+      "type": "fill",
+      "text": "Elsa saves $3 every week. In 5 weeks she saves _____ dollars.",
+      "image": null,
+      "answer": "15",
+      "points": 2
+    },
+    {
+      "id": 37,
+      "type": "fill",
+      "text": "Kim spends $2 every day. In 8 days he spends _____ dollars.",
+      "image": null,
+      "answer": "16",
+      "points": 2
+    },
+    {
+      "id": 38,
+      "type": "fill",
+      "text": "Mrs Lee bought movie tickets for $60 at $10 each. She bought _____ tickets.",
+      "image": null,
+      "answer": "6",
+      "points": 2
+    },
+    {
+      "id": 39,
+      "type": "fill",
+      "text": "$263 + $320 = _____ dollars.",
+      "image": null,
+      "answer": "583",
+      "points": 2
+    },
+    {
+      "id": 40,
+      "type": "fill",
+      "text": "$84 minus $21 = _____ dollars.",
+      "image": null,
+      "answer": "63",
+      "points": 2
+    },
+    {
+      "id": 41,
+      "type": "fill",
+      "text": "Henry saved $25.85 and Belle saved $32.10. _____ saved more.",
+      "image": null,
+      "answer": "Belle",
+      "points": 2
+    },
+    {
+      "id": 42,
+      "type": "fill",
+      "text": "A book costs $17.25 and a bag costs $17.95. The _____ costs more.",
+      "image": null,
+      "answer": "bag",
+      "points": 2
+    },
+    {
+      "id": 43,
+      "type": "fill",
+      "text": "Rani spent $84 and Lili spent $21 less. Lili spent _____ dollars.",
+      "image": null,
+      "answer": "63",
+      "points": 2
+    },
+    {
+      "id": 44,
+      "type": "fill",
+      "text": "A cube has _____ vertices.",
+      "image": null,
+      "answer": "8",
+      "points": 2
+    },
+    {
+      "id": 45,
+      "type": "fill",
+      "text": "A cube has _____ edges.",
+      "image": null,
+      "answer": "12",
+      "points": 2
+    },
+    {
+      "id": 46,
+      "type": "fill",
+      "text": "$5.35 = _____ cents.",
+      "image": null,
+      "answer": "535",
+      "points": 2
+    },
+    {
+      "id": 47,
+      "type": "fill",
+      "text": "Two ten-dollar notes and one five-dollar note equal _____ dollars.",
+      "image": null,
+      "answer": "25",
+      "points": 2
+    },
+    {
+      "id": 48,
+      "type": "fill",
+      "text": "A sphere has no flat faces and no _____.",
+      "image": null,
+      "answer": "vertices",
+      "points": 2
+    },
+    {
+      "id": 49,
+      "type": "fill",
+      "text": "A cone has 1 flat face, 1 curved face and _____ vertex.",
+      "image": null,
+      "answer": "1",
+      "points": 2
+    },
+    {
+      "id": 50,
+      "type": "fill",
+      "text": "The total of $84 and $63 is _____ dollars.",
+      "image": null,
+      "answer": "147",
+      "points": 2
+    },
+    {
+      "id": 51,
+      "type": "essay",
+      "text": "Describe a cube and tell how many faces, vertices, and edges it has.",
+      "image": null,
+      "answer": "A cube is a 3D shape with 6 flat square faces, 8 vertices, and 12 edges.",
+      "points": 0
+    },
+    {
+      "id": 52,
+      "type": "essay",
+      "text": "Explain how to find the total amount if you have 4 five-dollar notes and 3 one-dollar coins.",
+      "image": null,
+      "answer": "I would multiply 4 by 5 to get $20 from the notes, then add $3 from the coins, giving a total of $23.",
+      "points": 0
+    },
+    {
+      "id": 53,
+      "type": "essay",
+      "text": "How are a cube and a cuboid the same? How are they different?",
+      "image": null,
+      "answer": "A cube and a cuboid both have 6 flat faces, 8 vertices, and 12 edges. The difference is that all faces of a cube are equal squares, while a cuboid has rectangular faces of different sizes.",
+      "points": 0
+    },
+    {
+      "id": 54,
+      "type": "essay",
+      "text": "Aini saved $19.85 and Belle saved $32.10. Explain how to find who saved more.",
+      "image": null,
+      "answer": "First I compare the dollar amounts: $19 and $32. Since $32 is greater than $19, Belle saved more money even without looking at the cents.",
+      "points": 0
+    },
+    {
+      "id": 55,
+      "type": "essay",
+      "text": "How can you check if $263 + $320 = $583 is correct?",
+      "image": null,
+      "answer": "I can subtract to check: $583 minus $320 should equal $263. I can also add in a different order: $320 + $263. Both ways I get $583, so the answer is correct.",
+      "points": 0
+    }
+  ]
+}
