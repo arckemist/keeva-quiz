@@ -21,7 +21,7 @@ async function loadQuiz() {
 
     document.getElementById('quiz-title').textContent = data.title;
     landingTitle.textContent = data.title;
-    landingSub.textContent   = `${data.questions.length} Questions · 100 Points · Pass: 85%`;
+    landingSub.textContent   = `${data.questions.length} Soal · 100 Poin · Lulus: 85%`;
     questions = data.questions;
 
     const startBtn = document.getElementById('start-btn');
@@ -185,7 +185,7 @@ function showReview() {
     ? ` — ${metadata.subject} · Grade ${metadata.grade || '?'}`
     : '';
   document.getElementById('final-score').textContent =
-    `Score: ${score}/100${metaLine} — ${passed ? 'PASSED' : 'Not yet'}`;
+    `Skor: ${score}/100${metaLine} — ${passed ? 'LULUS' : 'Belum lulus'}`;
 
   const list = document.getElementById('review-list');
   list.innerHTML = '';
