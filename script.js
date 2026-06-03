@@ -2,6 +2,7 @@
 let questions = [];
 let current = 0;
 let score = 0;
+let totalPoints = 0;
 let answers = {};
 let ui = {};
 let metadata = {};
@@ -9,7 +10,7 @@ let metadata = {};
 async function loadQuiz() {
   const landingTitle = document.getElementById('quiz-title-display');
   const landingSub   = document.getElementById('landing-sub');
-  landingTitle.textContent = ui.loading || 'Loading quiz...';
+  landingTitle.textContent = ui.loading || 'Memuat kuis...';
 
   try {
     const res = await fetch('quiz_data.json');
@@ -18,33 +19,36 @@ async function loadQuiz() {
 
     metadata = data.metadata || {};
     ui       = data.ui_strings || {};
+    questions = data.questions;
+    totalPoints = questions.reduce((s, q) => s + (q.points || 0), 0);
 
     document.getElementById('quiz-title').textContent = data.title;
     landingTitle.textContent = data.title;
-    landingSub.textContent   = `${data.questions.length} Soal · 100 Poin · Lulus: 85%`;
-    questions = data.questions;
+    const maxPts = totalPoints;
+    const passThreshold = Math.ceil(maxPts * 0.85);
+    landingSub.textContent = `${data.questions.length} Soal · ${maxPts} Poin · Lulus: ${passThreshold} poin (85%)`;
 
     const startBtn = document.getElementById('start-btn');
     if (startBtn && ui.start_button) startBtn.textContent = ui.start_button;
 
-    document.getElementById('landing').style.display    = 'flex';
-    document.getElementById('quiz-area').style.display  = 'none';
-    document.getElementById('review-area').style.display= 'none';
-    document.getElementById('quiz-error').style.display = 'none';
+    document.getElementById('landing').style.display = 'flex';
+    document.getElementById('quiz-area').style.display    = 'none';
+    document.getElementById('review-area').style.display  = 'none';
+    document.getElementById('quiz-error').style.display   = 'none';
   } catch (err) {
     console.error('loadQuiz failed:', err);
-    document.getElementById('landing').style.display    = 'flex';
-    document.getElementById('quiz-area').style.display  = 'none';
+    document.getElementById('landing').style.display = 'flex';
+    document.getElementById('quiz-area').style.display    = 'none';
     const errEl = document.getElementById('quiz-error');
-    errEl.textContent = ui.error_load_failed || 'Failed to load quiz. Please refresh the page.';
+    errEl.textContent = ui.error_load_failed || 'Gagal memuat kuis. Silakan refresh halaman.';
     errEl.style.display = 'block';
   }
 }
 
 function showLanding() {
   document.getElementById('landing').style.display    = 'flex';
-  document.getElementById('quiz-area').style.display  = 'none';
-  document.getElementById('review-area').style.display= 'none';
+  document.getElementById('quiz-area').style.display   = 'none';
+  document.getElementById('review-area').style.display = 'none';
 }
 
 function startQuiz() {
@@ -52,8 +56,8 @@ function startQuiz() {
   score = 0;
   answers = {};
   document.getElementById('landing').style.display    = 'none';
-  document.getElementById('quiz-area').style.display  = 'block';
-  document.getElementById('review-area').style.display= 'none';
+  document.getElementById('quiz-area').style.display   = 'block';
+  document.getElementById('review-area').style.display = 'none';
   renderQuestion();
 }
 
@@ -64,7 +68,7 @@ function renderQuestion() {
 
   const pct = (current / total) * 100;
   document.getElementById('progress-bar').style.width = `${pct}%`;
-  const fmt = ui.progress_format || 'Question {n} of {total}';
+  const fmt = ui.progress_format || 'Soal {n} dari {total}';
   document.getElementById('progress-text').textContent =
     fmt.replace('{n}', dispN).replace('{total}', total);
 
@@ -89,43 +93,41 @@ function renderQuestion() {
       btn.onclick = () => submitMC(opt, btn);
       answerArea.appendChild(btn);
     });
-
   } else if (q.type === 'fill') {
     const inp = document.createElement('input');
     inp.id = 'fill-input';
     inp.type = 'text';
-    inp.placeholder = ui.fill_placeholder || 'Type your answer...';
+    inp.placeholder = ui.fill_placeholder || 'Ketik jawabanmu...';
     inp.addEventListener('input', () => {
       const val = inp.value.trim();
       answerArea.querySelector('.submit-btn').disabled = val.length === 0;
     });
     const btn = document.createElement('button');
     btn.className = 'submit-btn';
-    btn.textContent = ui.submit_button || 'Submit';
+    btn.textContent = ui.submit_button || 'Kirim';
     btn.disabled = true;
     btn.onclick = () => submitFill(inp.value.trim());
     answerArea.appendChild(inp);
     answerArea.appendChild(btn);
-
   } else if (q.type === 'essay') {
-    const ta = document.createElement('textarea');
+    const ta = document.createElement('input');
     ta.id = 'essay-input';
-    ta.placeholder = ui.essay_placeholder || 'Write your answer here...';
+    ta.type = 'text';
+    ta.placeholder = ui.essay_placeholder || 'Tulis jawabanmu di sini...';
     const charCount = document.createElement('div');
     charCount.id = 'char-count';
     charCount.style.fontSize = '0.8rem';
     charCount.style.color = '#666';
     charCount.style.marginBottom = '8px';
-    charCount.textContent = 'Minimum 30 characters';
-
+    charCount.textContent = `0/10 karakter`;
     const btn = document.createElement('button');
     btn.className = 'submit-btn';
-    btn.textContent = ui.submit_button || 'Submit';
+    btn.textContent = ui.submit_button || 'Kirim';
     btn.disabled = true;
     ta.addEventListener('input', () => {
       const len = ta.value.trim().length;
-      charCount.textContent = `${len}/30 characters`;
-      btn.disabled = len < 30;
+      charCount.textContent = `${len}/10 karakter`;
+      btn.disabled = len < 10;
     });
     btn.onclick = () => submitEssay(ta.value.trim());
     answerArea.appendChild(charCount);
@@ -178,14 +180,16 @@ function advance() {
 }
 
 function showReview() {
-  document.getElementById('quiz-area').style.display   = 'none';
-  document.getElementById('review-area').style.display = 'block';
-  const passed = score >= 85;
+  document.getElementById('quiz-area').style.display    = 'none';
+  document.getElementById('review-area').style.display  = 'block';
+  const maxPts = totalPoints;
+  const passThreshold = Math.ceil(maxPts * 0.85);
+  const passed = score >= passThreshold;
   const metaLine = metadata.subject
-    ? ` — ${metadata.subject} · Grade ${metadata.grade || '?'}`
+    ? ` — ${metadata.subject} · Kelas ${metadata.grade || '?'}`
     : '';
   document.getElementById('final-score').textContent =
-    `Skor: ${score}/100${metaLine} — ${passed ? 'LULUS' : 'Belum lulus'}`;
+    `Skor: ${score}/${maxPts} poin${metaLine} — ${passed ? 'LULUS 🎉' : 'Belum lulus'}`;
 
   const list = document.getElementById('review-list');
   list.innerHTML = '';
@@ -197,9 +201,9 @@ function showReview() {
                : 'r-essay';
     const div = document.createElement('div');
     div.className = 'review-item ' + status;
-    div.innerHTML = `<strong>Q${dispN} [${q.type.toUpperCase()}]:</strong> ${q.text}<br>
-      <em>Your answer:</em> ${a.chosen ?? '—'}<br>
-      <em>Model answer:</em> ${q.answer}`;
+    div.innerHTML = `<strong>Soal ${dispN} [${q.type.toUpperCase()}]:</strong> ${q.text}<br>
+      <em>Jawabanmu:</em> ${a.chosen ?? '—'}<br>
+      <em>Jawaban benar:</em> ${q.answer}`;
     list.appendChild(div);
   });
 }
@@ -212,14 +216,17 @@ function launchConfetti() {
   for (let i = 0; i < 30; i++) {
     const el = document.createElement('div');
     el.style.cssText = [
-      'position:fixed','width:8px','height:8px',
+      'position:fixed',
+      'width:8px','height:8px',
       `background:${colors[i % colors.length]}`,
       `border-radius:${Math.random()>0.5?'50%':'2px'}`,
       `left:${Math.random()*100}vw`,
       `top:${window.innerHeight}px`,
-      'pointer-events:none','z-index:9999',
+      'pointer-events:none',
+      'z-index:9999',
       `transform:rotate(${Math.random()*360}deg)`
     ].join(';');
+
     document.body.appendChild(el);
     const angle = -30 - Math.random() * 90;
     const rad   = angle * Math.PI / 180;
@@ -232,7 +239,9 @@ function launchConfetti() {
     const start = performance.now();
     function tick(now) {
       const dt = Math.min((now - start) / 1000, 3);
-      vyf += grav; x += vxf; y += vyf;
+      vyf += grav;
+      x   += vxf;
+      y   += vyf;
       el.style.left  = x + 'px';
       el.style.top   = y + 'px';
       el.style.opacity = Math.max(0, 1 - dt / 3);

@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "subject": "Agama Islam",
+    "subject": "Pendidikan Pancasila",
     "grade": "2",
-    "source_pdf": "keeva agama.pdf",
-    "generated_at": "2026-06-02"
+    "source_pdf": "PP.pdf",
+    "generated_at": "2026-06-03"
   },
   "ui_strings": {
     "start_button": "Mulai Kuis",
@@ -11,21 +11,21 @@
     "fill_placeholder": "Ketik jawabanmu...",
     "essay_placeholder": "Tulis jawabanmu di sini...",
     "loading": "Memuat kuis...",
-    "error_load_failed": "Gagal memuat kuis. Silakan segarkan halaman.",
+    "error_load_failed": "Gagal memuat kuis. Silakan refresh halaman.",
     "progress_format": "Soal {n} dari {total}"
   },
-  "title": "2 Juni 2026",
+  "title": "03 Juni 2026",
   "questions": [
     {
       "id": 1,
       "type": "mc",
-      "text": "Arti kata <strong>bersih</strong> adalah...",
+      "text": "Raja berasal dari Medan dan Amir berasal dari Jawa. Sikap yang baik adalah …",
       "image": null,
       "options": {
-        "A": "tidak ada kotoran",
-        "B": "banyak debu",
-        "C": "basah kuyup",
-        "D": "warna terang"
+        "A": "Bermain bersama tanpa membedakan suku",
+        "B": "Menghindari bermain bersama",
+        "C": "Saling mengejek",
+        "D": "Bermusuhan"
       },
       "answer": "A",
       "points": 2
@@ -33,41 +33,41 @@
     {
       "id": 2,
       "type": "mc",
-      "text": "Contoh kebersihan <strong>tubuh</strong> adalah...",
+      "text": "Perbedaan hobi antar-teman di sekolah seharusnya kita …",
       "image": null,
       "options": {
-        "A": "mandi dan menggosok gigi",
-        "B": "menyapu halaman",
-        "C": "mencuci piring",
-        "D": "menata kamar"
-      },
-      "answer": "A",
-      "points": 2
-    },
-    {
-      "id": 3,
-      "type": "mc",
-      "text": "Contoh kebersihan <strong>lingkungan tempat tinggal</strong> adalah...",
-      "image": null,
-      "options": {
-        "A": "memotong kuku",
-        "B": "menyapu halaman rumah",
-        "C": "keramas",
-        "D": "gosok gigi"
+        "A": "Hina",
+        "B": "Hormati dan tetap berteman",
+        "C": "Jadikan alasan bertengkar",
+        "D": "Abaikan"
       },
       "answer": "B",
       "points": 2
     },
     {
-      "id": 4,
+      "id": 3,
       "type": "mc",
-      "text": "Salah satu <strong>manfaat</strong> menjaga kebersihan adalah...",
+      "text": "Tunanetra membaca buku dengan bantuan huruf …",
       "image": null,
       "options": {
-        "A": "cepat lapar",
-        "B": "mudah marah",
-        "C": "terhindar dari penyakit",
-        "D": "tubuh menjadi berat"
+        "A": "Latin",
+        "B": "Hijaiyah",
+        "C": "Braille",
+        "D": "Romawi"
+      },
+      "answer": "C",
+      "points": 2
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "text": "Teman yang memiliki kebutuhan khusus sebaiknya kita …",
+      "image": null,
+      "options": {
+        "A": "Jauhi",
+        "B": "Ejekan",
+        "C": "Bantu dengan baik",
+        "D": "Abaikan"
       },
       "answer": "C",
       "points": 2
@@ -75,13 +75,13 @@
     {
       "id": 5,
       "type": "mc",
-      "text": "Jumlah <strong>rukun iman</strong> ada...",
+      "text": "Salah satu bentuk rukun dengan tetangga adalah …",
       "image": null,
       "options": {
-        "A": "lima",
-        "B": "enam",
-        "C": "tujuh",
-        "D": "delapan"
+        "A": "Berteriak di malam hari",
+        "B": "Menebang ranting pohon tetangga yang masuk rumah kita dengan izin",
+        "C": "Membuang sampah ke pekarangan tetangga",
+        "D": "Tidak menyapa tetangga"
       },
       "answer": "B",
       "points": 2
@@ -89,69 +89,69 @@
     {
       "id": 6,
       "type": "mc",
-      "text": "Rukun iman yang pertama adalah beriman kepada...",
+      "text": "Sikap mencegah kerusakan lingkungan ditunjukkan dengan cara …",
       "image": null,
       "options": {
-        "A": "Allah",
-        "B": "malaikat",
-        "C": "rasul",
-        "D": "hari akhir"
-      },
-      "answer": "A",
-      "points": 2
-    },
-    {
-      "id": 7,
-      "type": "mc",
-      "text": "Beriman kepada Allah artinya...",
-      "image": null,
-      "options": {
-        "A": "takut kepada Allah",
-        "B": "lari dari Allah",
-        "C": "meyakini bahwa Allah itu ada",
-        "D": "menghindari Allah"
-      },
-      "answer": "C",
-      "points": 2
-    },
-    {
-      "id": 8,
-      "type": "mc",
-      "text": "Malaikat adalah makhluk yang diciptakan Allah dari...",
-      "image": null,
-      "options": {
-        "A": "tanah",
-        "B": "cahaya (nur)",
-        "C": "api",
-        "D": "air"
+        "A": "Membuang sampah sembarangan",
+        "B": "Memilah sampah organik dan non-organik",
+        "C": "Menebang pohon di hutan",
+        "D": "Membuang limbah ke sungai"
       },
       "answer": "B",
       "points": 2
     },
     {
-      "id": 9,
+      "id": 7,
       "type": "mc",
-      "text": "<strong>Gaib</strong> artinya...",
+      "text": "Salah satu contoh kerja sama menjaga kebersihan sekolah adalah …",
       "image": null,
       "options": {
-        "A": "tidak bisa dilihat oleh mata",
-        "B": "bisa dilihat setiap hari",
-        "C": "ada di depan kita",
-        "D": "bisa dipegang tangan"
+        "A": "Upacara bendera",
+        "B": "Kerja bakti membersihkan kelas",
+        "C": "Pentas seni",
+        "D": "Ujian sekolah"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 8,
+      "type": "mc",
+      "text": "Kelompok masyarakat dengan budaya yang sama disebut …",
+      "image": null,
+      "options": {
+        "A": "Suku bangsa",
+        "B": "Keluarga inti",
+        "C": "Tetangga",
+        "D": "Teman sekolah"
       },
       "answer": "A",
       "points": 2
     },
     {
-      "id": 10,
+      "id": 9,
       "type": "mc",
-      "text": "Jumlah malaikat yang wajib kita imani ada...",
+      "text": "Identitas diri bisa berupa nama, tempat tinggal, dan …",
       "image": null,
       "options": {
-        "A": "sepuluh",
-        "B": "tiga",
-        "C": "sepuluh",
-        "D": "seratus"
+        "A": "Warna kesukaan",
+        "B": "Suku bangsa",
+        "C": "Makanan favorit",
+        "D": "Nama hewan peliharaan"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "text": "Contoh identitas diri yang bisa dilihat orang lain secara langsung adalah …",
+      "image": null,
+      "options": {
+        "A": "Cita-cita",
+        "B": "Mimpi",
+        "C": "Nama dan wajah",
+        "D": "Harapan"
       },
       "answer": "C",
       "points": 2
@@ -159,481 +159,93 @@
     {
       "id": 11,
       "type": "mc",
-      "text": "Tugas Malaikat Jibril adalah...",
+      "text": "Peduli lingkungan merupakan penerapan sila ke-berapa Pancasila?",
       "image": null,
       "options": {
-        "A": "menjaga manusia",
-        "B": "menyampaikan wahyu",
-        "C": "meniup sangkakala",
-        "D": "mencatat amal baik"
+        "A": "Sila ke-1",
+        "B": "Sila ke-2",
+        "C": "Sila ke-5",
+        "D": "Sila ke-3"
       },
-      "answer": "B",
+      "answer": "C",
       "points": 2
     },
     {
       "id": 12,
       "type": "mc",
-      "text": "Tugas Malaikat Mikail adalah...",
+      "text": "Gotong royong artinya bekerja secara …",
       "image": null,
       "options": {
-        "A": "menjaga pintu surga",
-        "B": "menurunkan hujan saja",
-        "C": "membagi rezeki",
-        "D": "mencatat amal"
+        "A": "Sendiri",
+        "B": "Bersama-sama",
+        "C": "Diam-diam",
+        "D": "Terpisah-pisah"
       },
-      "answer": "C",
+      "answer": "B",
       "points": 2
     },
     {
       "id": 13,
-      "type": "mc",
-      "text": "Tugas Malaikat Israfil adalah...",
+      "type": "fill",
+      "text": "Mohammad Hatta adalah salah satu tokoh _____.",
       "image": null,
-      "options": {
-        "A": "menjaga manusia",
-        "B": "membagi rezeki",
-        "C": "mencatat amal",
-        "D": "meniup sangkakala"
-      },
-      "answer": "D",
+      "answer": "Proklamasi",
       "points": 2
     },
     {
       "id": 14,
-      "type": "mc",
-      "text": "Tugas Malaikat Izrail adalah...",
+      "type": "fill",
+      "text": "Memilah sampah organik dan non-organik adalah contoh sikap peduli _____.",
       "image": null,
-      "options": {
-        "A": "mencabut nyawa",
-        "B": "menyampaikan wahyu",
-        "C": "membagi rezeki",
-        "D": "menjaga surga"
-      },
-      "answer": "A",
+      "answer": "Lingkungan",
       "points": 2
     },
     {
       "id": 15,
-      "type": "mc",
-      "text": "Kerja keras adalah...",
+      "type": "fill",
+      "text": "Tunanetra membaca buku dengan huruf _____.",
       "image": null,
-      "options": {
-        "A": "bekerja dengan sungguh-sungguh",
-        "B": "bekerja setengah hati",
-        "C": "bermalas-malasan",
-        "D": "tidur sepanjang hari"
-      },
-      "answer": "A",
+      "answer": "Braille",
       "points": 2
     },
     {
       "id": 16,
-      "type": "mc",
-      "text": "Contoh kerja keras di <strong>sekolah</strong> adalah...",
+      "type": "fill",
+      "text": "Orang yang tidak bisa berbicara disebut _____.",
       "image": null,
-      "options": {
-        "A": "tidak mau belajar",
-        "B": "belajar dengan rajin dan fokus",
-        "C": "bolos pelajaran",
-        "D": "meniru PR teman"
-      },
-      "answer": "B",
+      "answer": "Tunawicara",
       "points": 2
     },
     {
       "id": 17,
-      "type": "mc",
-      "text": "Salah satu <strong>hikmah</strong> kerja keras adalah...",
+      "type": "fill",
+      "text": "Orang yang tidak bisa melihat disebut _____.",
       "image": null,
-      "options": {
-        "A": "tubuh cepat lelah saja",
-        "B": "tidak punya waktu bermain",
-        "C": "mendapat pahala dari Allah",
-        "D": "di benci teman"
-      },
-      "answer": "C",
+      "answer": "Tunanetra",
       "points": 2
     },
     {
       "id": 18,
-      "type": "mc",
-      "text": "Rendah hati artinya...",
+      "type": "fill",
+      "text": "Teman yang berbeda suku sebaiknya kita _____.",
       "image": null,
-      "options": {
-        "A": "sombong dan angkuh",
-        "B": "tidak sombong dan tidak angkuh",
-        "C": "suka membanggakan diri",
-        "D": "meremehkan orang lain"
-      },
-      "answer": "B",
+      "answer": "Berteman",
       "points": 2
     },
     {
       "id": 19,
-      "type": "mc",
-      "text": "Contoh perilaku rendah hati adalah...",
+      "type": "essay",
+      "text": "Tuliskan 2 contoh kegiatan gotong royong bersama tetangga di rumah!",
       "image": null,
-      "options": {
-        "A": "tidak membanggakan diri sendiri",
-        "B": "pamer barang baru",
-        "C": "suka memotong pembicaraan",
-        "D": "merendahkan teman"
-      },
-      "answer": "A",
-      "points": 2
+      "answer": "Contoh: (1) Kerja bakti membersihkan selokan bersama-sama, (2) Membantu tetangga yang sedang hajatan atau tertimpa musibah.",
+      "points": 0
     },
     {
       "id": 20,
-      "type": "mc",
-      "text": "Hikmah rendah hati salah satunya adalah...",
-      "image": null,
-      "options": {
-        "A": "banyak musuh",
-        "B": "tidak punya teman",
-        "C": "selalu menang sendiri",
-        "D": "dicintai Allah dan teman"
-      },
-      "answer": "D",
-      "points": 2
-    },
-    {
-      "id": 21,
-      "type": "mc",
-      "text": "Zikir adalah...",
-      "image": null,
-      "options": {
-        "A": "mengingat dan menyebut nama Allah",
-        "B": "tidur malam hari",
-        "C": "makan bersama",
-        "D": "berlari-lari"
-      },
-      "answer": "A",
-      "points": 2
-    },
-    {
-      "id": 22,
-      "type": "mc",
-      "text": "Bacaan <strong>tasbih</strong> adalah...",
-      "image": null,
-      "options": {
-        "A": "Alhamdulillah",
-        "B": "Allahu Akbar",
-        "C": "Subhanallah",
-        "D": "La ilaha illallah"
-      },
-      "answer": "C",
-      "points": 2
-    },
-    {
-      "id": 23,
-      "type": "mc",
-      "text": "Arti bacaan <strong>tahmid</strong> adalah...",
-      "image": null,
-      "options": {
-        "A": "segala puji bagi Allah",
-        "B": "Allah Maha Besar",
-        "C": "Maha Suci Allah",
-        "D": "tiada tuhan selain Allah"
-      },
-      "answer": "A",
-      "points": 2
-    },
-    {
-      "id": 24,
-      "type": "mc",
-      "text": "Bacaan <strong>takbir</strong> adalah...",
-      "image": null,
-      "options": {
-        "A": "Subhanallah",
-        "B": "Allahu Akbar",
-        "C": "Alhamdulillah",
-        "D": "La ilaha illallah"
-      },
-      "answer": "B",
-      "points": 2
-    },
-    {
-      "id": 25,
-      "type": "mc",
-      "text": "Arti bacaan <strong>tahlil</strong> adalah...",
-      "image": null,
-      "options": {
-        "A": "Allah Maha Besar",
-        "B": "Maha Suci Allah",
-        "C": "segala puji bagi Allah",
-        "D": "tiada tuhan selain Allah"
-      },
-      "answer": "D",
-      "points": 2
-    },
-    {
-      "id": 26,
-      "type": "mc",
-      "text": "Doa adalah...",
-      "image": null,
-      "options": {
-        "A": "memohon sesuatu kepada Allah",
-        "B": "berkata kasar",
-        "C": "berteriak kencang",
-        "D": "berlari ke sana kemari"
-      },
-      "answer": "A",
-      "points": 2
-    },
-    {
-      "id": 27,
-      "type": "mc",
-      "text": "Salah satu tata cara berdoa yang baik adalah...",
-      "image": null,
-      "options": {
-        "A": "membalikkan badan",
-        "B": "berdiri sambil goyang",
-        "C": "mengangkat kedua tangan",
-        "D": "berteriak histeris"
-      },
-      "answer": "C",
-      "points": 2
-    },
-    {
-      "id": 28,
-      "type": "mc",
-      "text": "Nabi Nuh berdakwah kepada kaumnya selama...",
-      "image": null,
-      "options": {
-        "A": "100 tahun",
-        "B": "950 tahun",
-        "C": "10 tahun",
-        "D": "1 tahun"
-      },
-      "answer": "B",
-      "points": 2
-    },
-    {
-      "id": 29,
-      "type": "mc",
-      "text": "Nabi Nuh membuat <strong>bahtera</strong> (perahu besar) atas perintah Allah untuk...",
-      "image": null,
-      "options": {
-        "A": "menyelamatkan orang yang beriman dari banjir",
-        "B": "menjadi tempat bermain",
-        "C": "di jual belikan",
-        "D": "menangkap ikan"
-      },
-      "answer": "A",
-      "points": 2
-    },
-    {
-      "id": 30,
-      "type": "mc",
-      "text": "Sikap yang bisa kita teladani dari Nabi Nuh adalah...",
-      "image": null,
-      "options": {
-        "A": "cepat menyerah",
-        "B": "marah kepada semua orang",
-        "C": "sabar dalam berdakwah",
-        "D": "tidak peduli pada sesama"
-      },
-      "answer": "C",
-      "points": 2
-    },
-    {
-      "id": 31,
-      "type": "fill",
-      "text": "Arti kata bersih adalah _____.",
-      "image": null,
-      "answer": "tidak ada kotoran",
-      "points": 2
-    },
-    {
-      "id": 32,
-      "type": "fill",
-      "text": "Membersihkan tubuh bisa dilakukan dengan _____ dan menggosok gigi.",
-      "image": null,
-      "answer": "mandi",
-      "points": 2
-    },
-    {
-      "id": 33,
-      "type": "fill",
-      "text": "Membersihkan lingkungan tempat tinggal salah satunya dengan _____ halaman.",
-      "image": null,
-      "answer": "menyapu",
-      "points": 2
-    },
-    {
-      "id": 34,
-      "type": "fill",
-      "text": "Salah satu manfaat menjaga kebersihan adalah _____ dari penyakit.",
-      "image": null,
-      "answer": "terhindar",
-      "points": 2
-    },
-    {
-      "id": 35,
-      "type": "fill",
-      "text": "Jumlah rukun iman ada _____.",
-      "image": null,
-      "answer": "enam",
-      "points": 2
-    },
-    {
-      "id": 36,
-      "type": "fill",
-      "text": "Rukun iman yang pertama ialah beriman kepada _____.",
-      "image": null,
-      "answer": "Allah",
-      "points": 2
-    },
-    {
-      "id": 37,
-      "type": "fill",
-      "text": "Malaikat diciptakan Allah dari cahaya atau _____.",
-      "image": null,
-      "answer": "nur",
-      "points": 2
-    },
-    {
-      "id": 38,
-      "type": "fill",
-      "text": "Gaib artinya tidak bisa _____ oleh mata.",
-      "image": null,
-      "answer": "dilihat",
-      "points": 2
-    },
-    {
-      "id": 39,
-      "type": "fill",
-      "text": "Jumlah malaikat yang wajib kita imani ada _____.",
-      "image": null,
-      "answer": "sepuluh",
-      "points": 2
-    },
-    {
-      "id": 40,
-      "type": "fill",
-      "text": "Tugas Malaikat Jibril adalah menyampaikan _____ kepada para nabi.",
-      "image": null,
-      "answer": "wahyu",
-      "points": 2
-    },
-    {
-      "id": 41,
-      "type": "fill",
-      "text": "Tugas Malaikat Mikail adalah membagikan _____ dari Allah.",
-      "image": null,
-      "answer": "rezeki",
-      "points": 2
-    },
-    {
-      "id": 42,
-      "type": "fill",
-      "text": "Malaikat Israfil bertugas meniup _____ di hari kiamat.",
-      "image": null,
-      "answer": "sangkakala",
-      "points": 2
-    },
-    {
-      "id": 43,
-      "type": "fill",
-      "text": "Malaikat Izrail bertugas mencabut _____ makhluk.",
-      "image": null,
-      "answer": "nyawa",
-      "points": 2
-    },
-    {
-      "id": 44,
-      "type": "fill",
-      "text": "Kerja keras artinya bekerja dengan _____ hati.",
-      "image": null,
-      "answer": "sungguh-sungguh",
-      "points": 2
-    },
-    {
-      "id": 45,
-      "type": "fill",
-      "text": "Rendah hati artinya tidak _____ dan tidak angkuh.",
-      "image": null,
-      "answer": "sombong",
-      "points": 2
-    },
-    {
-      "id": 46,
-      "type": "fill",
-      "text": "Zikir artinya mengingat dan menyebut nama _____.",
-      "image": null,
-      "answer": "Allah",
-      "points": 2
-    },
-    {
-      "id": 47,
-      "type": "fill",
-      "text": "Bacaan tahmid adalah 'Alhamdulillah' yang artinya segala _____ bagi Allah.",
-      "image": null,
-      "answer": "puji",
-      "points": 2
-    },
-    {
-      "id": 48,
-      "type": "fill",
-      "text": "Bacaan takbir ialah 'Allahu Akbar' yang artinya Allah Maha _____.",
-      "image": null,
-      "answer": "Besar",
-      "points": 2
-    },
-    {
-      "id": 49,
-      "type": "fill",
-      "text": "Doa adalah _____ kepada Allah.",
-      "image": null,
-      "answer": "memohon",
-      "points": 2
-    },
-    {
-      "id": 50,
-      "type": "fill",
-      "text": "Nabi Nuh berdakwah selama _____ tahun.",
-      "image": null,
-      "answer": "950",
-      "points": 2
-    },
-    {
-      "id": 51,
       "type": "essay",
-      "text": "Tuliskan <strong>empat (4) rukun iman</strong> selain beriman kepada Allah!",
+      "text": "Sebutkan 3 hal yang bisa kamu lakukan untuk menjaga kebersihan lingkungan sekolah!",
       "image": null,
-      "answer": "Empat rukun iman selain beriman kepada Allah: (1) beriman kepada malaikat-malaikat Allah, (2) beriman kepada kitab-kitab Allah, (3) beriman kepada rasul-rasul Allah, (4) beriman kepada hari akhir, (5) beriman kepada qada dan qadar. (Sebutkan minimal 4 dengan benar.)",
-      "points": 0
-    },
-    {
-      "id": 52,
-      "type": "essay",
-      "text": "Sebutkan <strong>tiga (3) contoh perilaku rendah hati</strong> dalam kehidupan sehari-hari!",
-      "image": null,
-      "answer": "Contoh perilaku rendah hati: (1) tidak membanggakan diri sendiri di depan teman, (2) mau mengakui kesalahan dan meminta maaf, (3) tidak meremehkan atau menghina orang lain, (4) menghargai pendapat teman, (5) bersikap sopan kepada orang tua, guru, dan teman. (Sebutkan minimal 3.)",
-      "points": 0
-    },
-    {
-      "id": 53,
-      "type": "essay",
-      "text": "Tuliskan <strong>dua (2) hikmah menjaga kebersihan</strong>!",
-      "image": null,
-      "answer": "Hikmah menjaga kebersihan: (1) tubuh menjadi sehat dan terhindar dari penyakit, (2) lingkungan menjadi nyaman untuk ditinggali, (3) mendapat pahala dari Allah SWT, (4) disenangi teman-teman. (Sebutkan minimal 2.)",
-      "points": 0
-    },
-    {
-      "id": 54,
-      "type": "essay",
-      "text": "Tuliskan <strong>lafal dan arti bacaan tahmid</strong> ('Alhamdulillah')!",
-      "image": null,
-      "answer": "Lafal tahmid: 'Alhamdulillah'. Artinya: 'Segala puji bagi Allah'. Disebut tahmid karena dibaca setiap selesai shalat dan dzikir.",
-      "points": 0
-    },
-    {
-      "id": 55,
-      "type": "essay",
-      "text": "Ceritakan kembali kisah <strong>Nabi Nuh</strong> dengan bahasamu sendiri (minimal 4 kalimat)!",
-      "image": null,
-      "answer": "Nabi Nuh AS adalah nabi yang berdakwah kepada kaumnya selama 950 tahun. Kaumnya tetap menyembah berhala dan menolak ajakannya. Maka Allah memerintahkan Nabi Nuh membuat bahtera (perahu besar) yang sangat lebar. Datanglah banjir besar, dan Nabi Nuh menyelamatkan orang-orang beriman di dalam bahtera. Pelajarannya: tetap sabar dan tawakal kepada Allah seperti Nabi Nuh.",
+      "answer": "Contoh: (1) Membuang sampah di tempatnya, (2) Memilah sampah organik dan non-organik, (3) Kerja bakti membersihkan kelas setiap Jumat.",
       "points": 0
     }
   ]
