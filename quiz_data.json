@@ -19,33 +19,19 @@
     {
       "id": 1,
       "type": "mc",
-      "text": "Raja berasal dari Medan dan Amir berasal dari Jawa. Sikap yang baik adalah …",
+      "text": "Lambang sila ke-1 Pancasila adalah …",
       "image": null,
       "options": {
-        "A": "Bermain bersama tanpa membedakan suku",
-        "B": "Menghindari bermain bersama",
-        "C": "Saling mengejek",
-        "D": "Bermusuhan"
-      },
-      "answer": "A",
-      "points": 2
-    },
-    {
-      "id": 2,
-      "type": "mc",
-      "text": "Perbedaan hobi antar-teman di sekolah seharusnya kita …",
-      "image": null,
-      "options": {
-        "A": "Hina",
-        "B": "Hormati dan tetap berteman",
-        "C": "Jadikan alasan bertengkar",
-        "D": "Abaikan"
+        "A": "Rantai",
+        "B": "Bintang",
+        "C": "Pohon beringin",
+        "D": "Kepala banteng"
       },
       "answer": "B",
       "points": 2
     },
     {
-      "id": 3,
+      "id": 2,
       "type": "mc",
       "text": "Tunanetra membaca buku dengan bantuan huruf …",
       "image": null,
@@ -59,15 +45,29 @@
       "points": 2
     },
     {
-      "id": 4,
+      "id": 3,
       "type": "mc",
-      "text": "Teman yang memiliki kebutuhan khusus sebaiknya kita …",
+      "text": "Membawa tas belanja sendiri saat ke pasar adalah contoh sikap …",
       "image": null,
       "options": {
-        "A": "Jauhi",
-        "B": "Ejekan",
-        "C": "Bantu dengan baik",
-        "D": "Abaikan"
+        "A": "Boros",
+        "B": "Hemat dan peduli lingkungan",
+        "C": "Malas",
+        "D": "Individualis"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "text": "Orang yang tidak bisa berbicara disebut …",
+      "image": null,
+      "options": {
+        "A": "Tunanetra",
+        "B": "Tunarungu",
+        "C": "Tunawicara",
+        "D": "Tunagrahita"
       },
       "answer": "C",
       "points": 2
@@ -75,33 +75,19 @@
     {
       "id": 5,
       "type": "mc",
-      "text": "Salah satu bentuk rukun dengan tetangga adalah …",
+      "text": "Perbedaan hobi antar-teman di sekolah seharusnya kita …",
       "image": null,
       "options": {
-        "A": "Berteriak di malam hari",
-        "B": "Menebang ranting pohon tetangga yang masuk rumah kita dengan izin",
-        "C": "Membuang sampah ke pekarangan tetangga",
-        "D": "Tidak menyapa tetangga"
+        "A": "Hina",
+        "B": "Hormati dan tetap berteman",
+        "C": "Jadikan alasan bertengkar",
+        "D": "Abaikan"
       },
       "answer": "B",
       "points": 2
     },
     {
       "id": 6,
-      "type": "mc",
-      "text": "Sikap mencegah kerusakan lingkungan ditunjukkan dengan cara …",
-      "image": null,
-      "options": {
-        "A": "Membuang sampah sembarangan",
-        "B": "Memilah sampah organik dan non-organik",
-        "C": "Menebang pohon di hutan",
-        "D": "Membuang limbah ke sungai"
-      },
-      "answer": "B",
-      "points": 2
-    },
-    {
-      "id": 7,
       "type": "mc",
       "text": "Salah satu contoh kerja sama menjaga kebersihan sekolah adalah …",
       "image": null,
@@ -115,63 +101,7 @@
       "points": 2
     },
     {
-      "id": 8,
-      "type": "mc",
-      "text": "Kelompok masyarakat dengan budaya yang sama disebut …",
-      "image": null,
-      "options": {
-        "A": "Suku bangsa",
-        "B": "Keluarga inti",
-        "C": "Tetangga",
-        "D": "Teman sekolah"
-      },
-      "answer": "A",
-      "points": 2
-    },
-    {
-      "id": 9,
-      "type": "mc",
-      "text": "Identitas diri bisa berupa nama, tempat tinggal, dan …",
-      "image": null,
-      "options": {
-        "A": "Warna kesukaan",
-        "B": "Suku bangsa",
-        "C": "Makanan favorit",
-        "D": "Nama hewan peliharaan"
-      },
-      "answer": "B",
-      "points": 2
-    },
-    {
-      "id": 10,
-      "type": "mc",
-      "text": "Contoh identitas diri yang bisa dilihat orang lain secara langsung adalah …",
-      "image": null,
-      "options": {
-        "A": "Cita-cita",
-        "B": "Mimpi",
-        "C": "Nama dan wajah",
-        "D": "Harapan"
-      },
-      "answer": "C",
-      "points": 2
-    },
-    {
-      "id": 11,
-      "type": "mc",
-      "text": "Peduli lingkungan merupakan penerapan sila ke-berapa Pancasila?",
-      "image": null,
-      "options": {
-        "A": "Sila ke-1",
-        "B": "Sila ke-2",
-        "C": "Sila ke-5",
-        "D": "Sila ke-3"
-      },
-      "answer": "C",
-      "points": 2
-    },
-    {
-      "id": 12,
+      "id": 7,
       "type": "mc",
       "text": "Gotong royong artinya bekerja secara …",
       "image": null,
@@ -185,68 +115,186 @@
       "points": 2
     },
     {
-      "id": 13,
-      "type": "fill",
-      "text": "Mohammad Hatta adalah salah satu tokoh _____.",
+      "id": 8,
+      "type": "mc",
+      "text": "Peduli lingkungan merupakan penerapan sila ke-berapa Pancasila?",
       "image": null,
-      "answer": "Proklamasi",
+      "options": {
+        "A": "Sila ke-1",
+        "B": "Sila ke-2",
+        "C": "Sila ke-5",
+        "D": "Sila ke-3"
+      },
+      "answer": "C",
+      "points": 2
+    },
+    {
+      "id": 9,
+      "type": "mc",
+      "text": "Teman yang memiliki kebutuhan khusus sebaiknya kita …",
+      "image": null,
+      "options": {
+        "A": "Jauhi",
+        "B": "Ejekan",
+        "C": "Bantu dengan baik",
+        "D": "Abaikan"
+      },
+      "answer": "C",
+      "points": 2
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "text": "Menggunakan transportasi umum merupakan salah satu upaya pencegahan …",
+      "image": null,
+      "options": {
+        "A": "Kekeringan",
+        "B": "Polusi udara",
+        "C": "Banjir",
+        "D": "Gempa bumi"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 11,
+      "type": "mc",
+      "text": "Mohammad Hatta adalah salah satu tokoh …",
+      "image": null,
+      "options": {
+        "A": "Pewayangan",
+        "B": "Proklamasi Kemerdekaan Indonesia",
+        "C": "Olahraga",
+        "D": "Musik"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 12,
+      "type": "mc",
+      "text": "Teman yang berbeda agama sebaiknya kita …",
+      "image": null,
+      "options": {
+        "A": "Tinggalkan",
+        "B": "Tetap berteman dengan baik",
+        "C": "Jauhi",
+        "D": "Ejekan"
+      },
+      "answer": "B",
+      "points": 2
+    },
+    {
+      "id": 13,
+      "type": "mc",
+      "text": "Contoh identitas diri yang bisa dilihat orang lain secara langsung adalah …",
+      "image": null,
+      "options": {
+        "A": "Cita-cita",
+        "B": "Mimpi",
+        "C": "Nama dan wajah",
+        "D": "Harapan"
+      },
+      "answer": "C",
       "points": 2
     },
     {
       "id": 14,
-      "type": "fill",
-      "text": "Memilah sampah organik dan non-organik adalah contoh sikap peduli _____.",
+      "type": "mc",
+      "text": "Sikap mencegah kerusakan lingkungan ditunjukkan dengan cara …",
       "image": null,
-      "answer": "Lingkungan",
+      "options": {
+        "A": "Membuang sampah sembarangan",
+        "B": "Memilah sampah organik dan non-organik",
+        "C": "Menebang pohon di hutan",
+        "D": "Membuang limbah ke sungai"
+      },
+      "answer": "B",
       "points": 2
     },
     {
       "id": 15,
-      "type": "fill",
-      "text": "Tunanetra membaca buku dengan huruf _____.",
+      "type": "mc",
+      "text": "Identitas diri bisa berupa nama, tempat tinggal, dan …",
       "image": null,
-      "answer": "Braille",
+      "options": {
+        "A": "Warna kesukaan",
+        "B": "Suku bangsa",
+        "C": "Makanan favorit",
+        "D": "Nama hewan peliharaan"
+      },
+      "answer": "B",
       "points": 2
     },
     {
       "id": 16,
-      "type": "fill",
-      "text": "Orang yang tidak bisa berbicara disebut _____.",
+      "type": "mc",
+      "text": "Salah satu bentuk rukun dengan tetangga adalah …",
       "image": null,
-      "answer": "Tunawicara",
+      "options": {
+        "A": "Berteriak di malam hari",
+        "B": "Menebang ranting pohon tetangga yang masuk rumah kita dengan izin",
+        "C": "Membuang sampah ke pekarangan tetangga",
+        "D": "Tidak menyapa tetangga"
+      },
+      "answer": "B",
       "points": 2
     },
     {
       "id": 17,
-      "type": "fill",
-      "text": "Orang yang tidak bisa melihat disebut _____.",
+      "type": "mc",
+      "text": "Raja berasal dari Medan dan Amir berasal dari Jawa. Sikap yang baik adalah …",
       "image": null,
-      "answer": "Tunanetra",
+      "options": {
+        "A": "Bermain bersama tanpa membedakan suku",
+        "B": "Menghindari bermain bersama",
+        "C": "Saling mengejek",
+        "D": "Bermusuhan"
+      },
+      "answer": "A",
       "points": 2
     },
     {
       "id": 18,
-      "type": "fill",
-      "text": "Teman yang berbeda suku sebaiknya kita _____.",
+      "type": "mc",
+      "text": "Kelompok masyarakat dengan budaya yang sama disebut …",
       "image": null,
-      "answer": "Berteman",
+      "options": {
+        "A": "Suku bangsa",
+        "B": "Keluarga inti",
+        "C": "Tetangga",
+        "D": "Teman sekolah"
+      },
+      "answer": "A",
       "points": 2
     },
     {
       "id": 19,
-      "type": "essay",
-      "text": "Tuliskan 2 contoh kegiatan gotong royong bersama tetangga di rumah!",
+      "type": "mc",
+      "text": "Karakter khusus yang dimiliki seseorang dan membedakan dia dari orang lain disebut …",
       "image": null,
-      "answer": "Contoh: (1) Kerja bakti membersihkan selokan bersama-sama, (2) Membantu tetangga yang sedang hajatan atau tertimpa musibah.",
-      "points": 0
+      "options": {
+        "A": "Identitas diri",
+        "B": "Nama lengkap",
+        "C": "Alamat rumah",
+        "D": "Nama sekolah"
+      },
+      "answer": "A",
+      "points": 2
     },
     {
       "id": 20,
-      "type": "essay",
-      "text": "Sebutkan 3 hal yang bisa kamu lakukan untuk menjaga kebersihan lingkungan sekolah!",
+      "type": "mc",
+      "text": "Orang yang tidak bisa melihat disebut …",
       "image": null,
-      "answer": "Contoh: (1) Membuang sampah di tempatnya, (2) Memilah sampah organik dan non-organik, (3) Kerja bakti membersihkan kelas setiap Jumat.",
-      "points": 0
+      "options": {
+        "A": "Tunawicara",
+        "B": "Tunanetra",
+        "C": "Tunarungu",
+        "D": "Tunadaksa"
+      },
+      "answer": "B",
+      "points": 2
     }
   ]
 }
